@@ -387,78 +387,6 @@
         "bus_width": 12,
         "clearance": 0.1,
         "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.18,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C1-Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.18,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C2-Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.18,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C3-Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.18,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C4-Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -544,78 +472,6 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C1-Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C2-Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C3-Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
-        "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "C4-Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
       }
     ],
     "meta": {
@@ -626,59 +482,7 @@
     "netclass_patterns": [
       {
         "netclass": "M1-Default",
-        "pattern": "M1-RF_P"
-      },
-      {
-        "netclass": "M1-Default",
         "pattern": "M1-BTN1"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-VSET"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-X32K_1"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-RF_N"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-RF_19"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-SDA"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-BUZZ"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-X24M_N"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-X24M_P"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-DCOUPL"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-TCKC"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-BTN1_PAD"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-BTN3_PAD"
       },
       {
         "netclass": "M1-Default",
@@ -686,19 +490,7 @@
       },
       {
         "netclass": "M1-Default",
-        "pattern": "M1-PMIC_INT"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-SCL"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-RF_16"
-      },
-      {
-        "netclass": "M1-Default",
-        "pattern": "M1-BTN3"
+        "pattern": "M1-BUZZ"
       },
       {
         "netclass": "M1-Default",
@@ -706,11 +498,11 @@
       },
       {
         "netclass": "M1-Default",
-        "pattern": "M1-BTN2_PAD"
+        "pattern": "M1-TCKC"
       },
       {
         "netclass": "M1-Default",
-        "pattern": "M1-RF_15"
+        "pattern": "M1-X24M_P"
       },
       {
         "netclass": "M1-Default",
@@ -718,7 +510,23 @@
       },
       {
         "netclass": "M1-Default",
-        "pattern": "M1-TMSC"
+        "pattern": "M1-BTN1_PAD"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-X24M_N"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-RF_N"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-X32K_1"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-BTN3_PAD"
       },
       {
         "netclass": "M1-Default",
@@ -726,11 +534,59 @@
       },
       {
         "netclass": "M1-Default",
+        "pattern": "M1-RF_15"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-RF_19"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-BTN2_PAD"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-VSET"
+      },
+      {
+        "netclass": "M1-Default",
         "pattern": "M1-BTN2"
       },
       {
         "netclass": "M1-Default",
+        "pattern": "M1-PMIC_INT"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-RF_P"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-BTN3"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-DCOUPL"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-TMSC"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-RF_16"
+      },
+      {
+        "netclass": "M1-Default",
         "pattern": "M1-X32K_2"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-SCL"
+      },
+      {
+        "netclass": "M1-Default",
+        "pattern": "M1-SDA"
       },
       {
         "netclass": "M1-Power",
@@ -770,79 +626,15 @@
       },
       {
         "netclass": "M2-Default",
+        "pattern": "M2-SCL"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_P"
+      },
+      {
+        "netclass": "M2-Default",
         "pattern": "M2-ANT"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-RESET_N"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-TMSC"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BTN2_PAD"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BUZZ"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BTN3"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-X24M_P"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-RF_19"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BTN1"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-SDA"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-DCOUPL"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-PMIC_INT"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-X32K_2"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-RF_16"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-RF_15"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BTN3_PAD"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-TCKC"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-RF_18"
-      },
-      {
-        "netclass": "M2-Default",
-        "pattern": "M2-BTN2"
       },
       {
         "netclass": "M2-Default",
@@ -850,15 +642,27 @@
       },
       {
         "netclass": "M2-Default",
-        "pattern": "M2-VSET"
+        "pattern": "M2-RESET_N"
       },
       {
         "netclass": "M2-Default",
-        "pattern": "M2-RF_N"
+        "pattern": "M2-RF_18"
       },
       {
         "netclass": "M2-Default",
-        "pattern": "M2-RF_17"
+        "pattern": "M2-TCKC"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BTN2"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BTN1"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_16"
       },
       {
         "netclass": "M2-Default",
@@ -866,7 +670,11 @@
       },
       {
         "netclass": "M2-Default",
-        "pattern": "M2-SCL"
+        "pattern": "M2-DCOUPL"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BTN3_PAD"
       },
       {
         "netclass": "M2-Default",
@@ -874,7 +682,55 @@
       },
       {
         "netclass": "M2-Default",
-        "pattern": "M2-RF_P"
+        "pattern": "M2-TMSC"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-PMIC_INT"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-SDA"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BUZZ"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_N"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-VSET"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-X24M_P"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_17"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BTN3"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_15"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-X32K_2"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-RF_19"
+      },
+      {
+        "netclass": "M2-Default",
+        "pattern": "M2-BTN2_PAD"
       },
       {
         "netclass": "M2-Power",
@@ -914,39 +770,7 @@
       },
       {
         "netclass": "M3-Default",
-        "pattern": "M3-BTN3_PAD"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-X32K_1"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-TMSC"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-BTN1_PAD"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-X24M_N"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-RF_18"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-RF_15"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-RF_16"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-BTN1"
+        "pattern": "M3-X32K_2"
       },
       {
         "netclass": "M3-Default",
@@ -954,19 +778,11 @@
       },
       {
         "netclass": "M3-Default",
-        "pattern": "M3-BTN3"
+        "pattern": "M3-RF_15"
       },
       {
         "netclass": "M3-Default",
-        "pattern": "M3-ANT"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-X24M_P"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-X32K_2"
+        "pattern": "M3-RF_18"
       },
       {
         "netclass": "M3-Default",
@@ -974,31 +790,11 @@
       },
       {
         "netclass": "M3-Default",
-        "pattern": "M3-RF_N"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-SCL"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-RESET_N"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-VSET"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-TCKC"
-      },
-      {
-        "netclass": "M3-Default",
-        "pattern": "M3-DCOUPL"
-      },
-      {
-        "netclass": "M3-Default",
         "pattern": "M3-SDA"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-X24M_N"
       },
       {
         "netclass": "M3-Default",
@@ -1006,7 +802,23 @@
       },
       {
         "netclass": "M3-Default",
-        "pattern": "M3-RF_17"
+        "pattern": "M3-TCKC"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-BTN3_PAD"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-VSET"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-RESET_N"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-BTN1"
       },
       {
         "netclass": "M3-Default",
@@ -1014,11 +826,55 @@
       },
       {
         "netclass": "M3-Default",
+        "pattern": "M3-SCL"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-X32K_1"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-BTN3"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-RF_16"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-X24M_P"
+      },
+      {
+        "netclass": "M3-Default",
         "pattern": "M3-BUZZ"
       },
       {
         "netclass": "M3-Default",
+        "pattern": "M3-RF_17"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-BTN1_PAD"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-DCOUPL"
+      },
+      {
+        "netclass": "M3-Default",
         "pattern": "M3-RF_19"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-TMSC"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-RF_N"
+      },
+      {
+        "netclass": "M3-Default",
+        "pattern": "M3-ANT"
       },
       {
         "netclass": "M3-Power",
@@ -1058,83 +914,7 @@
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-RF_18"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-BTN3"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-RF_P"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-VSET"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-X32K_1"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-ANT"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-RF_16"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-RF_17"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-X32K_2"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-SCL"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-BTN1_PAD"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-TCKC"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-RF_19"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-BTN2"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-X24M_N"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-BTN3_PAD"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-BTN2_PAD"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-RESET_N"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-DCOUPL"
-      },
-      {
-        "netclass": "M4-Default",
-        "pattern": "M4-TMSC"
+        "pattern": "M4-SDA"
       },
       {
         "netclass": "M4-Default",
@@ -1142,15 +922,35 @@
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-BTN1"
+        "pattern": "M4-TCKC"
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-RF_15"
+        "pattern": "M4-ANT"
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-PMIC_INT"
+        "pattern": "M4-RF_19"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RF_16"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN3"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-X32K_2"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN2_PAD"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-X24M_N"
       },
       {
         "netclass": "M4-Default",
@@ -1158,11 +958,67 @@
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-SDA"
+        "pattern": "M4-BUZZ"
       },
       {
         "netclass": "M4-Default",
-        "pattern": "M4-BUZZ"
+        "pattern": "M4-PMIC_INT"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-VSET"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN1"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-DCOUPL"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RF_17"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RF_P"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN3_PAD"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-SCL"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RF_18"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-TMSC"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-X32K_1"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN1_PAD"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-BTN2"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RESET_N"
+      },
+      {
+        "netclass": "M4-Default",
+        "pattern": "M4-RF_15"
       },
       {
         "netclass": "M4-Power",
@@ -1199,54 +1055,6 @@
       {
         "netclass": "M4-Power",
         "pattern": "M4-SW_BUCK"
-      },
-      {
-        "netclass": "C1-Default",
-        "pattern": "C1-CHG_IN"
-      },
-      {
-        "netclass": "C1-Default",
-        "pattern": "C1-GND"
-      },
-      {
-        "netclass": "C1-Default",
-        "pattern": "C1-VIN_CHG"
-      },
-      {
-        "netclass": "C2-Default",
-        "pattern": "C2-CHG_IN"
-      },
-      {
-        "netclass": "C2-Default",
-        "pattern": "C2-VIN_CHG"
-      },
-      {
-        "netclass": "C2-Default",
-        "pattern": "C2-GND"
-      },
-      {
-        "netclass": "C3-Default",
-        "pattern": "C3-GND"
-      },
-      {
-        "netclass": "C3-Default",
-        "pattern": "C3-CHG_IN"
-      },
-      {
-        "netclass": "C3-Default",
-        "pattern": "C3-VIN_CHG"
-      },
-      {
-        "netclass": "C4-Default",
-        "pattern": "C4-CHG_IN"
-      },
-      {
-        "netclass": "C4-Default",
-        "pattern": "C4-VIN_CHG"
-      },
-      {
-        "netclass": "C4-Default",
-        "pattern": "C4-GND"
       }
     ]
   },

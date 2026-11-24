@@ -66,9 +66,9 @@ Docs: `Hardware/KiCad/F91-Main_board_v2/README.md`, panel + fab files in `Hardwa
 `Hardware/KiCad/F91-Charge_pad/` is obsolete (kept for reference).
 
 ### Before ordering
-- [ ] **Board not finished (2026-11-24):** the committed board (routing seed 7) routes every signal with no clearance or short errors,
-  but one GND island remains: U2:D2 (charger GND), C33:2 and Y2:2 are walled in by the crystal, VBAT, BUZZ, SCL and RF tracks.
-  Being fixed by rerouting that GND together with BUZZ and the crystal lines. Panel and fab files are not regenerated yet. Do not order.
+- [x] Board routed (2026-11-25): 0 unconnected, GND is one net, no clearance/short/crossing errors. The charger GND island
+  (U2:D2, C33, Y2:2) is joined over B to the pour under U1 (X32K_1 rerouted). DRC leftovers (accepted, same as before): 10 courtyard
+  overlaps, one 0.087 mm pour neck, one 0.1992 mm pour-to-edge gap, parity notes for unused MCU pins. Panel and fab files regenerated.
 - [ ] Open the main board in KiCad, run DRC, and look over the generated routing (U1 pins 1–8, charger and buck pockets).
 - [ ] Case open: check the mode-button clamp arm stays clear of the pins (pins ~10 mm above its line), and whether the steel back touches the clamp (→ insulate pins).
 - [ ] Check JLC stock on the day (CC2640R2FRGZR had 600) and the part rotations in JLC's placement preview.

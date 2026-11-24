@@ -19,3 +19,6 @@ Hardware/SolidCraft/f91_watch_assembly.json
 # Personal photos (kept locally)
 Hardware/images/measurements/
 Hardware/SolidCraft/F91_Tycho_v2.sc
+
+# KiCad lock files
+*.lck
