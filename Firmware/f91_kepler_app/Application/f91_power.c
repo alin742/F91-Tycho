@@ -33,7 +33,7 @@
 #define F91_BUVLO_3V0      0x0    /* CHARGECTRL1[5:3] = 000 -> 3.0 V */
 
 /* ---------------------------------------------------------------- pins */
-#define F91_PMIC_INT_PIN   IOID_3          /* BQ25180 /INT, open drain (DIO3) */
+#define F91_PMIC_INT_PIN   IOID_6          /* BQ25180 /INT, open drain (DIO6) */
 
 static PIN_State        intPinState;
 static PIN_Handle       intPinHandle;

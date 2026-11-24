@@ -97,6 +97,9 @@ write('PAD_ROUND_D1.5_B', smd('1', 'circle', 0, 0, 1.5, 1.5, side='B') + crt('B.
 for d in ['0.8', '1.1']:
     write(f'NPTH_D{d}', npth(0, 0, float(d)) + crt('F.CrtYd', -0.95, -0.95, 0.95, 0.95), attr='through_hole',
           descr='holder peg hole')
+# ---- charging contact pin: plated hole for a hand-soldered Ø1.2 mm brass pin (points down into the case back)
+write('PIN_PTH_D1.25', tht('1', 0, 0, 1.7, 1.3) + crt('F.CrtYd', -0.95, -0.95, 0.95, 0.95), attr='through_hole',
+      descr='charging contact: Ø1.2 brass pin, soldered from the top, 2.0 mm below the board')
 # ---- FFC solder pads, 4 x 1.0 mm pitch, bottom
 body = ''.join(smd(str(i + 1), 'roundrect', 0, (i - 1.5) * 1.0, 1.3, 0.6, side='B', rr=0.25) for i in range(4))
 body += crt('B.CrtYd', -0.85, -2.15, 0.85, 2.15)

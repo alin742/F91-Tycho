@@ -1,7 +1,7 @@
 /******************************************************************************
  @file  f91_power.h
 
- @brief v2 board power: BQ25180 charger (I2C 0x6A, /INT on DIO3) and battery voltage
+ @brief v2 board power: BQ25180 charger (I2C 0x6A, /INT on DIO6) and battery voltage
         (10M/1M divider on DIO23 = Board_ADC0 of the LaunchPad board file).
 
  Hardware (Hardware/KiCad/F91-Main_board_v2): LIR2016 -> BQ25180 BAT -> SYS -> TPS62840 -> 2.0 V.

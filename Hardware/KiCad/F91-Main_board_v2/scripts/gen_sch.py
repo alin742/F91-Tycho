@@ -58,7 +58,7 @@ BLOCKS = [
     ('MCU supply, reset, crystals', ['FL1', 'C3', 'C4', 'C5', 'C7', 'C6', 'C8', 'C9', 'C16', 'C19', 'R1', 'C20',
                                      'Y1', 'C17', 'C18', 'Y2']),
     ('RF front end + antenna (v1 layout)', ['L11', 'C31', 'C11', 'C21', 'L21', 'L12', 'C13', 'L13', 'C24', 'C51', 'AE1']),
-    ('Charging input + BQ25180 charger', ['J2', 'C30', 'U2', 'C32', 'C33', 'BT1']),
+    ('Charging input + BQ25180 charger', ['P1', 'P2', 'D1', 'D2', 'R24', 'C30', 'U2', 'C32', 'C33', 'BT1']),
     ('TPS62840 2.0 V buck + battery sense', ['U3', 'L1', 'R11', 'C34', 'R12', 'R13', 'C35']),
     ('Buttons (clamp = VBAT -> N-FET)', ['Q1', 'R21', 'SW1', 'SW1B', 'Q2', 'R22', 'SW2', 'SW2B', 'Q3', 'R23', 'SW3', 'SW3B']),
     ('Display connector, I2C, test pads', ['J1', 'R2', 'R3', 'TP1', 'TP2', 'TP4', 'TP5',

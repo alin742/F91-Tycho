@@ -22,6 +22,8 @@ ORDER = [
     ('Q1', (-7.2, 6.4), (0, 90, 180, 270)), ('R21', (-7.2, 5.2), (0, 90)),
     ('Q2', (-6.6, -4.6), (0, 90, 180, 270)), ('R22', (-6.8, -2.4), (0, 90)),
     ('Q3', (12.4, 6.4), (0, 90, 180, 270)), ('R23', (13.0, 3.8), (0, 90)),
+    # charging input next to the pins P1/P2 (12.80,-3.40)/(11.19,-5.32)
+    ('D2', (11.0, -3.0), (0, 90, 180, 270)), ('R24', (10.0, -4.6), (0, 90)), ('D1', (10.6, -1.2), (0, 90, 180, 270)),
 ]
 
 
@@ -81,7 +83,7 @@ def main():
         return s
 
     for f in b.GetFootprints():
-        if f.GetReference() in new or f.GetReference() in ('BT1', 'AE1', 'J2'):
+        if f.GetReference() in new or f.GetReference() in ('BT1', 'AE1'):
             continue
         if f.IsFlipped():
             continue

@@ -291,10 +291,20 @@ def astar_cost(src, dst, bl, vok, cost, vcost, max_exp=900000):
 
 
 def main():
+    global SKIP
+    if '--gnd' in sys.argv:          # route GND as a normal net too (guarantees GND connectivity
+        sys.argv.remove('--gnd')     # when long tracks would split the pour)
+        SKIP = {''}
+    only = None
+    if '--only' in sys.argv:         # second pass: route just this net, existing tracks stay fixed
+        k = sys.argv.index('--only'); only = sys.argv[k + 1]; del sys.argv[k:k + 2]
+        SKIP = {''}
     iters = int(sys.argv[1]) if len(sys.argv) > 1 else 25
     b = pcbnew.LoadBoard(PCB)
     t0 = time.time()
     pf = PF(b)
+    if only:
+        pf.nets = only.split(",")
     order = pf.conn_order()
     print(f'setup {time.time() - t0:.1f}s, {len(order)} nets', flush=True)
     pres = 0.5

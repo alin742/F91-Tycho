@@ -46,8 +46,10 @@ PLACE = {
     'L1':  (7.25, 10.48, 0, 'F'),   # 2.2u
     'R11': (5.98, 9.10, 90, 'F'),   # VSET 1.74k, between J1 and U3 (pad 1 next to C2 = VSET)
     'C17': (8.30, 7.30, 90, 'F'),   # 32 kHz load cap, moved from v1 to make room
-    # FFC solder pads, bottom right strip (clear of the antenna feed at x = 12.8)
-    'J2':  (13.95, 1.50, 0, 'B'),
+    # charging contact pins (plated holes), watch (9.75, 6.17) / (8.14, 8.09) -> board = (x + 3.05, 2.77 - y)
+    # (only free spot beside the cell, clear of every pad, the edge and the holder pegs)
+    'P1':  (12.80, -3.40, 0, 'F'),
+    'P2':  (11.19, -5.32, 0, 'F'),
 }
 FLIP = set()   # normal footprints that must be flipped to the bottom
 

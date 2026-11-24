@@ -2,7 +2,7 @@
 Writes two batch files (stage1 case/strap, stage2 electronics) into SolidCraft's recovery folder.
 Frame: watch centre at X=Y=0, +Y = 12 o'clock (CASIO print side), Z up, display face up.
 Z stack: case back outer -0.65 / inner -0.21 (dip floor -1.79, charging PCB -1.29..-0.49 under the cell), clamp gap, cell 0.02-1.62, board 1.64-2.35,
-holder top + OLED 4.44-5.69, crystal 6.62-7.40, case top 7.40."""
+holder 0.04-4.44, OLED in pocket 3.64-4.89, cavity top 5.47, crystal 5.94-6.72."""
 import json, math, os
 R = os.path.expanduser('~/.local/share/solidcraft/recovery/f91_v2')
 
@@ -49,34 +49,47 @@ def cyl(name, base, d, h, op='new', body=None, targets=None, axis=None):
 
 
 CASE = 'F-91W case (resin)'
+CAV_D = 28.2        # cavity Ø: caliper read 27.61 with the main jaws inside (reads low, >= 0.6 mm), so +0.6
+NOTCH = 25.9        # notch tips at 12/6: read 25.11 (low); the 25.70 mm module passes them, so 25.9
+CAV_TOP = 5.47      # -0.21 + 5.68 measured depth
+CRYS_Z = 5.45      # glass 5.47-6.27 (gen_body.py: 8.5 mm overall incl. the dip)
+TOP = 6.27
 s1 = []
 # ---- case body: chamfered main body + lugs
 outline = [(-12, 19.1), (12, 19.1), (12, 16), (13.6, 16), (17.6, 12), (17.6, -12), (13.6, -16), (12, -16),
            (12, -19.1), (-12, -19.1), (-12, -16), (-13.6, -16), (-17.6, -12), (-17.6, 12), (-13.6, 16), (-12, 16)]
-s1 += poly('Case body', 'XY', [list(p) for p in outline], 7.61, CASE, offset=-0.21)
+s1 += poly('Case body', 'XY', [list(p) for p in outline], TOP + 0.21, CASE, offset=-0.21)
 s1 += box('Lug slot top', (0, 17.8, 3.6), 18.2, 3.0, 8.4, 'cut', targets=[CASE])
 s1 += box('Lug slot bottom', (0, -17.8, 3.6), 18.2, 3.0, 8.4, 'cut', targets=[CASE])
-s1 += box('Module cavity', (0, 0, 2.65), 27.0, 26.0, 6.3, 'cut', targets=[CASE])
-s1 += box('Display window', (0, 0, 6.2), 24.0, 19.0, 1.0, 'cut', targets=[CASE])
-s1 += poly('Crystal recess', 'XY', chamfer_rect(28.8, 25.6, 2.6), 1.0, None, 'cut', [CASE], offset=6.6)
+# measured 2026-11-24: round cavity, depth 5.68 from the case-back seat (z -0.21) to the window lip
+s1 += cyl('Module cavity', (0, 0, -0.3), CAV_D, CAV_TOP + 0.3, 'cut', targets=[CASE])
+for sgn, nm in ((1, '12'), (-1, '6')):
+    s1 += box(f'Cavity notch {nm}', (0, sgn * (NOTCH / 2 + (CAV_D / 2 + 0.3 - NOTCH / 2) / 2), (CAV_TOP - 0.21) / 2), 3.0,
+              CAV_D / 2 + 0.3 - NOTCH / 2, CAV_TOP + 0.21, 'join', targets=[CASE])
+s1 += box('Display window', (0, 0, CAV_TOP + 0.5), 23.0, 14.0, 1.2, 'cut', targets=[CASE])
+s1 += poly('Crystal recess', 'XY', chamfer_rect(28.8, 25.6, 2.6), 1.0, None, 'cut', [CASE], offset=CRYS_Z)
 for i, (x, y) in enumerate([(11.1, 12.7), (-11.1, 12.7), (-11.1, -12.7), (11.1, -12.7)]):
     s1 += cyl(f'Screw boss {i+1}', (x, y, -0.21), 3.2, 3.2, 'join', targets=[CASE])
     s1 += cyl(f'Screw hole {i+1}', (x, y, -0.3), 1.2, 2.8, 'cut', targets=[CASE])
 # ---- case back (steel), Ø4.3 charging hole over the charging PCB pads
 BACK = 'Case back (steel, drilled)'
-DIP_D = 23.35                 # dip diameter, assumed centred on the case back
-CHG_X, CHG_Y = 6.0, 0.0       # charging PCB centre: inside the dip, under the cell, FFC edge facing J2 (3 o'clock)
-CHG_Z = -1.79 + 0.5           # dip floor + 0.5 mm rubber ring
+PINS = [(9.75, 6.17), (8.14, 8.09)]   # charge contact pins (+, GND): Ø1.2 brass in plated holes, 1.85 mm below the board (flush with the back's inner face)
 # steel 0.44 mm, round dip Ø23.35 (inside) pressed 1.58 mm outward (2.02 total), measured 2026-11-24
-s1 += poly('Case back', 'XY', chamfer_rect(31.8, 28.3, 3.2), 0.44, BACK, offset=-0.65)
-s1 += cyl('Dip cup', (0, 0, -2.23), DIP_D + 0.88, 2.02, 'join', targets=[BACK])
-s1 += cyl('Dip', (0, 0, -1.79), DIP_D, 1.6, 'cut', targets=[BACK])
-s1 += cyl('Charging hole', (CHG_X, CHG_Y, -2.4), 4.3, 0.8, 'cut', targets=[BACK])
-for i, (x, y) in enumerate([(11.1, 12.7), (-11.1, 12.7), (-11.1, -12.7), (11.1, -12.7)]):
-    s1 += cyl(f'Case back screw {i+1}', (x, y, -0.96), 2.2, 0.25, body=f'Case back screw {i+1}')
-    s1 += cyl(f'Screw shank {i+1}', (x, y, -0.71), 1.2, 3.0, 'join', targets=[f'Case back screw {i+1}'])
+# octagon measured 2026-11-24: 12/6 edges (strap side) 21.0, 3/9 edges (button side) 13.0, slanted corners 9.0;
+# screws 18.7 across x 25.4 along the strap (measured); plate edge 1.4 mm beyond the screws (as on the GrabCAD part) -> 30.6 x 28.2
+BW, BH, BCX, BCY = 15.32, 14.10, 4.82, 7.60
+BACK_PTS = [[-BW + BCX, BH], [BW - BCX, BH], [BW, BH - BCY], [BW, -BH + BCY], [BW - BCX, -BH], [-BW + BCX, -BH], [-BW, -BH + BCY], [-BW, BH - BCY]]
+SCREWS = [(9.35, 12.7), (-9.35, 12.7), (-9.35, -12.7), (9.35, -12.7)]   # 18.7 x 25.4 mm (measured)
+s1 += poly('Case back', 'XY', BACK_PTS, 0.44, BACK, offset=-0.65)
+# flat back (no dip, 2026-11-24): two Ø1.8 holes under the charge pins
+for i, (x, y) in enumerate(PINS):
+    s1 += cyl(f'Charge pin hole {i+1}', (x, y, -0.8), 1.8, 0.8, 'cut', targets=[BACK])
+for i, (x, y) in enumerate(SCREWS):
+    s1 += cyl(f'Screw hole plate {i+1}', (x, y, -0.8), 1.25, 0.8, 'cut', targets=[BACK])
+    s1 += cyl(f'Case back screw {i+1}', (x, y, -0.90), 2.2, 0.25, body=f'Case back screw {i+1}')
+    s1 += cyl(f'Screw shank {i+1}', (x, y, -0.65), 1.2, 3.0, 'join', targets=[f'Case back screw {i+1}'])
 # ---- crystal with the printed face (decal from the GrabCAD print geometry)
-s1 += poly('Crystal', 'XY', chamfer_rect(28.6, 25.4, 2.5), 0.78, 'Crystal', offset=6.62)
+s1 += poly('Crystal', 'XY', chamfer_rect(28.6, 25.4, 2.5), 0.8, 'Crystal', offset=CRYS_Z + 0.02)
 # ---- buttons
 s1 += cyl('Button right', (17.1, -4.77, 3.7), 2.0, 1.8, body='Button right (mode)', axis='X')
 s1 += cyl('Button left top', (-18.9, 4.77, 3.7), 2.0, 1.8, body='Button left top (light)', axis='X')
@@ -108,36 +121,25 @@ s1 += [{'command': 'appearance.assign', 'params': {'bodies': [CASE, 'Strap top',
                                                               'Case back screw 4'],
                                                     'color': '#c4c7cb', 'pbr': {'metallic': 1, 'roughness': 0.3, 'dielectric_ior': 1.5}}},
        {'command': 'appearance.assign', 'params': {'bodies': ['Crystal'], 'color': '#dfe8ee', 'opacity': 0.25}},
-       {'command': 'canvas.decal', 'params': {'path': R + '/f91w_face_print.png', 'face': [0, 0, 7.4], 'width': 28.6}}]
+       {'command': 'canvas.decal', 'params': {'path': R + '/f91w_face_print.png', 'face': [0, 0, TOP], 'width': 28.6}}]
 
 # ---- stage 2: v2 electronics
 s2 = []
 s2 += [{'command': 'file.insert_step', 'params': {'path': R + '/F91-Movement_holder.step', 'name': 'Movement holder',
                                                   'matrix': [-1, 0, 0, -0.04, 0, 1, 0, 0.0, 0, 0, -1, 4.44]}},
        {'command': 'file.insert_step', 'params': {'path': R + '/F91-Main_board_v2.step', 'name': 'Main board v2',
-                                                  'matrix': [1, 0, 0, -3.05, 0, 1, 0, 2.77, 0, 0, 1, 1.64]}},
-       {'command': 'file.insert_step', 'params': {'path': R + '/F91-Charge_pad.step', 'name': 'Charging PCB (inside case back)',
-                                                  'matrix': [0, 1, 0, CHG_X, -1, 0, 0, CHG_Y,
-                                                             0, 0, 1, CHG_Z], 'tolerance': 0.001}}]
+                                                  'matrix': [1, 0, 0, -3.05, 0, 1, 0, 2.77, 0, 0, 1, 1.64]}}]
 s2 += cyl('LIR2016 cell', (-0.40, 1.47, 0.02), 20.0, 1.6, body='LIR2016')
-s2 += cyl('Rubber ring', (CHG_X, CHG_Y, -1.79), 7.0, 0.5, body='Rubber ring 0.5 mm')
-s2 += cyl('Rubber ring hole', (CHG_X, CHG_Y, -1.85), 4.5, 0.6, 'cut', targets=['Rubber ring 0.5 mm'])
-s2 += cyl('Magnet 1', (CHG_X, CHG_Y + 4.0, CHG_Z), 3.0, 1.0, body='Magnet 3x1 (1)')
-s2 += cyl('Magnet 2', (CHG_X, CHG_Y - 4.0, CHG_Z), 3.0, 1.0, body='Magnet 3x1 (2)')
-s2 += box('OLED module', (0, -0.2, 5.065), 26.3, 11.6, 1.25, body='OLED 0.83in 96x39 (approx outline)')
-s2 += box('OLED active area', (0, -0.2, 5.695), 19.55, 7.94, 0.01, body='OLED active area')
-# FFC: 4-way 1.0 mm ribbon, 4.2 mm wide, from the charging PCB edge (x = CHG_X + 2.5) out along +X,
-# up the dip wall, to J2 on the main board's underside at 3 o'clock (world ~ (13.55, 0), z 1.64)
-z0 = CHG_Z + 0.8
-s2 += box('FFC ribbon', (CHG_X + 2.5 + 1.6, CHG_Y, z0 + 0.05), 3.2, 4.2, 0.1, body='FFC ribbon 4-way 1.0 mm')
-s2 += box('FFC ribbon rise', (11.9, CHG_Y, (z0 + 1.64) / 2), 0.1, 4.2, 1.64 - z0, 'join', targets=['FFC ribbon 4-way 1.0 mm'])
-s2 += box('FFC ribbon top', (12.95, CHG_Y, 1.59), 2.1, 4.2, 0.1, 'join', targets=['FFC ribbon 4-way 1.0 mm'])
+for i, (x, y) in enumerate(PINS):
+    s2 += cyl(f'Charge pin {i+1}', (x, y, -0.21), 1.2, 1.85, body=f'Charge pin {i+1} (brass)')
+# OLED sits in the holder's 0.8 mm pocket: 3.64 .. 4.89
+s2 += box('OLED module', (0, -0.2, 4.265), 26.3, 11.6, 1.25, body='OLED 0.83in 96x39 (approx outline)')
+s2 += box('OLED active area', (0, -0.2, 4.895), 19.55, 7.94, 0.01, body='OLED active area')
 s2 += [{'command': 'appearance.assign', 'params': {'bodies': ['Movement_holder v16'], 'color': '#e8e4da', 'opacity': 0.35}},
        {'command': 'appearance.assign', 'params': {'bodies': ['LIR2016'], 'color': '#b8bcc0', 'pbr': {'metallic': 1, 'roughness': 0.35, 'dielectric_ior': 1.5}}},
-       {'command': 'appearance.assign', 'params': {'bodies': ['Magnet 3x1 (1)', 'Magnet 3x1 (2)'], 'color': '#9ea3a8', 'pbr': {'metallic': 1, 'roughness': 0.25, 'dielectric_ior': 1.5}}},
+       {'command': 'appearance.assign', 'params': {'bodies': ['Charge pin 1 (brass)', 'Charge pin 2 (brass)'], 'color': '#c9a227', 'pbr': {'metallic': 1, 'roughness': 0.3, 'dielectric_ior': 1.5}}},
        {'command': 'appearance.assign', 'params': {'bodies': ['OLED 0.83in 96x39 (approx outline)'], 'color': '#202226'}},
-       {'command': 'appearance.assign', 'params': {'bodies': ['FFC ribbon 4-way 1.0 mm'], 'color': '#d08a2a'}},
-       {'command': 'canvas.decal', 'params': {'path': R + '/oled_mock.png', 'face': {'face': [0, -0.2, 5.70], 'body': 'OLED active area', 'index': 0}, 'width': 19.55}}]
+       {'command': 'canvas.decal', 'params': {'path': R + '/oled_mock.png', 'face': {'face': [0, -0.2, 4.90], 'body': 'OLED active area', 'index': 0}, 'width': 19.55}}]
 
 json.dump({'commands': s1}, open(os.path.join(R, 'watch_stage1.json'), 'w'), indent=0)
 json.dump({'commands': s2}, open(os.path.join(R, 'watch_stage2.json'), 'w'), indent=0)

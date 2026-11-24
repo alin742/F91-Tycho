@@ -2352,9 +2352,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x04"
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016)
+				(offset 0.762)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -2362,7 +2365,17 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
 				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2372,8 +2385,121 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2404,7 +2530,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Schottky diode"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2415,7 +2541,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "connector"
+			(property "ki_keywords" "diode Schottky"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2426,7 +2552,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2437,66 +2563,58 @@
 					)
 				)
 			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635)
+						(xy -1.905 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+						(xy -0.635 -1.27)
+						(xy -0.635 -0.635)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0)
+					)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "D_Schottky_1_1"
 				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2512,9 +2630,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2529,17 +2647,155 @@
 						)
 					)
 				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_TVS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_TVS"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Bidirectional transient-voltage-suppression diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode TVS thyrector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_TVS_0_1"
+				(polyline
+					(pts
+						(xy -2.54 1.27)
+						(xy -2.54 -1.27)
+						(xy 2.54 1.27)
+						(xy 2.54 -1.27)
+						(xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27)
+						(xy 0 1.27)
+						(xy 0 -1.27)
+						(xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_TVS_1_1"
 				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2548,16 +2804,16 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4222,129 +4478,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "F91_LCSC:5050660622"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5043,17 +5176,9 @@
 		(at 30.48 48.26)
 		(uuid "567d6364-cf8e-5ef2-8076-4f7560753636")
 	)
-	(global_label "PMIC_INT"
-		(shape passive)
-		(at 30.48 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify right)
-		)
-		(uuid "b88375d7-ed4d-5f78-98e9-c730e2f73e40")
+	(no_connect
+		(at 30.48 50.8)
+		(uuid "438a2cf0-e7a3-5f36-8fd9-859672833981")
 	)
 	(global_label "SCL"
 		(shape passive)
@@ -5079,9 +5204,17 @@
 		)
 		(uuid "fe613972-6ec6-5c6c-8000-07835b3743d9")
 	)
-	(no_connect
-		(at 30.48 58.42)
-		(uuid "90621ffa-9f66-51a5-bf02-772eae122a54")
+	(global_label "PMIC_INT"
+		(shape passive)
+		(at 30.48 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "d5145f8e-9f4a-5144-b382-7cee0bddb644")
 	)
 	(no_connect
 		(at 30.48 60.96)
@@ -8131,162 +8264,32 @@
 		(uuid "877d24d8-2988-5294-b61b-c33ac5c30aaa")
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 320.04 121.92 0)
+		(lib_id "Connector:TestPoint")
+		(at 314.96 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "f3564dd7-3d9a-54cd-a2e9-54414c8686d5")
-		(property "Reference" "J2"
-			(at 320.04 118.11 0)
+		(uuid "ab34a66d-4c7e-5be1-b3f6-12a3749f7bd5")
+		(property "Reference" "P1"
+			(at 314.96 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "FFC to charging PCB"
-			(at 320.04 120.65 0)
+		(property "Value" "charge + pin"
+			(at 314.96 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "F91_custom:FFC4_P1.0_SOLDER_B"
-			(at 320.04 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 320.04 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "reverse-polarity Schottky, ESD diode and pull-down sit on the charging PCB"
-			(at 320.04 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 320.04 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9c9ba8f6-0cae-515e-a0d1-96cb38095054")
-		)
-		(pin "2"
-			(uuid "9360c74a-637e-54db-9ab7-d256760b8363")
-		)
-		(pin "3"
-			(uuid "dd337a66-0436-50b9-becf-4d8a883ee7ea")
-		)
-		(pin "4"
-			(uuid "6102484e-38a5-526d-b5ff-63bab00a5250")
-		)
-		(instances
-			(project "F91-Main_board_v2"
-				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "VIN_CHG"
-		(shape passive)
-		(at 314.96 119.38 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify right)
-		)
-		(uuid "28648712-22dd-5264-bd62-b157ff6b9c5c")
-	)
-	(global_label "VIN_CHG"
-		(shape passive)
-		(at 314.96 121.92 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify right)
-		)
-		(uuid "47dedfc1-76b2-5c1b-b7f4-d7b4f152e53c")
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 314.96 124.46 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify right)
-		)
-		(uuid "06bf6c64-4cec-5e1d-867d-0dfb5991629b")
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 314.96 127 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify right)
-		)
-		(uuid "78cece1f-d9ba-5260-b07a-b591d957311a")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 347.98 124.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a37803da-b6c4-5b42-9a43-5d8594f8ec42")
-		(property "Reference" "C30"
-			(at 347.98 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 347.98 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 347.98 123.19 0)
+		(property "Footprint" "F91_custom:PIN_PTH_D1.25"
+			(at 314.96 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8295,7 +8298,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 347.98 123.19 0)
+			(at 314.96 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8304,7 +8307,477 @@
 			)
 		)
 		(property "Description" ""
-			(at 347.98 123.19 0)
+			(at 314.96 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 314.96 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1bd4a2bc-e1e4-5781-80f4-13f0c809ae84")
+		)
+		(instances
+			(project "F91-Main_board_v2"
+				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
+					(reference "P1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CHG_IN"
+		(shape passive)
+		(at 314.96 119.38 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "4c3be877-beb0-5b71-8bae-ca8124608677")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 347.98 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "86a1e325-967b-5379-bf77-484cc1de94ea")
+		(property "Reference" "P2"
+			(at 347.98 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "charge GND pin"
+			(at 347.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "F91_custom:PIN_PTH_D1.25"
+			(at 347.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 347.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 347.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 347.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2eab62f-4c72-5361-a566-4ab481eb848b")
+		)
+		(instances
+			(project "F91-Main_board_v2"
+				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
+					(reference "P2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 347.98 119.38 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "e05aadcd-9baf-5532-9338-1fec885f8eab")
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 383.54 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29e7b182-2ed7-5d08-9d50-3498ad43b91c")
+		(property "Reference" "D1"
+			(at 383.54 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PMEG3002AEL"
+			(at 383.54 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "F91_LCSC:SOD-882_L1.0-W0.6-RD"
+			(at 383.54 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 383.54 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 383.54 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C478015"
+			(at 383.54 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6ca9f3e3-e2c8-5276-ad22-2a3ae3675d17")
+		)
+		(pin "2"
+			(uuid "dc82bd4b-ff40-53f8-bb3e-f183b9ba8045")
+		)
+		(instances
+			(project "F91-Main_board_v2"
+				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "VIN_CHG"
+		(shape passive)
+		(at 379.73 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "2d5f175e-5d07-5d6e-9aa7-b495bb72f458")
+	)
+	(global_label "CHG_IN"
+		(shape passive)
+		(at 387.35 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "1d0ff081-49a7-54ee-82d9-672e266fbfec")
+	)
+	(symbol
+		(lib_id "Device:D_TVS")
+		(at 421.64 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7466cde8-3971-5bb3-9623-47841f942fde")
+		(property "Reference" "D2"
+			(at 421.64 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD1E10B06"
+			(at 421.64 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "F91_LCSC:X1SON-2_L1.0-W0.6-P0.65-BI-1"
+			(at 421.64 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 421.64 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 421.64 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C48260"
+			(at 421.64 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1719e5d1-6265-58b3-962e-0acc5b60e853")
+		)
+		(pin "2"
+			(uuid "0c7dc015-8218-55af-8e3c-ec8140665774")
+		)
+		(instances
+			(project "F91-Main_board_v2"
+				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CHG_IN"
+		(shape passive)
+		(at 417.83 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "9cc24e37-ae85-53ad-835e-5749bea03e29")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 425.45 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "c3eb5cdd-c621-579f-8e64-16309ddf6b9c")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 454.66 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81c1bdc9-264f-57b6-9771-0135158515de")
+		(property "Reference" "R24"
+			(at 454.66 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1M"
+			(at 454.66 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 454.66 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 454.66 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 454.66 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C26083"
+			(at 454.66 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41eb83c3-2111-5496-af06-18435a2ff7f7")
+		)
+		(pin "2"
+			(uuid "e71d4eca-ba5b-5102-ac6e-aca1ead7b3ca")
+		)
+		(instances
+			(project "F91-Main_board_v2"
+				(path "/9030bc49-7901-5ee9-8eca-3a303c48e494"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CHG_IN"
+		(shape passive)
+		(at 454.66 120.65 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "034b0039-5bbe-5519-b2bc-df73d0a20701")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 454.66 128.27 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right)
+		)
+		(uuid "7880968a-b709-5f80-beae-c66f2bfbfac0")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 487.68 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a37803da-b6c4-5b42-9a43-5d8594f8ec42")
+		(property "Reference" "C30"
+			(at 487.68 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 487.68 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 487.68 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 487.68 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 487.68 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8313,7 +8786,7 @@
 			)
 		)
 		(property "LCSC" "C52923"
-			(at 347.98 123.19 0)
+			(at 487.68 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8338,7 +8811,7 @@
 	)
 	(global_label "VIN_CHG"
 		(shape passive)
-		(at 347.98 120.65 90)
+		(at 487.68 120.65 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8350,7 +8823,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 347.98 128.27 270)
+		(at 487.68 128.27 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8362,7 +8835,7 @@
 	)
 	(symbol
 		(lib_id "F91_LCSC:BQ25180YBGR")
-		(at 391.16 124.46 0)
+		(at 530.86 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8370,7 +8843,7 @@
 		(dnp no)
 		(uuid "942e47ee-d10e-5451-a1ba-0b8af4768a94")
 		(property "Reference" "U2"
-			(at 391.16 120.65 0)
+			(at 530.86 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8378,7 +8851,7 @@
 			)
 		)
 		(property "Value" "BQ25180"
-			(at 391.16 123.19 0)
+			(at 530.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8386,7 +8859,7 @@
 			)
 		)
 		(property "Footprint" "F91_LCSC:DSBGA-8_L1.6-W0.9-R2-C4-P0.40-BL"
-			(at 391.16 123.19 0)
+			(at 530.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8395,7 +8868,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 391.16 123.19 0)
+			(at 530.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8404,7 +8877,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 391.16 123.19 0)
+			(at 530.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8413,7 +8886,7 @@
 			)
 		)
 		(property "LCSC" "C3682423"
-			(at 391.16 123.19 0)
+			(at 530.86 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8456,7 +8929,7 @@
 	)
 	(global_label "PMIC_INT"
 		(shape passive)
-		(at 402.59 120.65 0)
+		(at 542.29 120.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8468,7 +8941,7 @@
 	)
 	(global_label "VIN_CHG"
 		(shape passive)
-		(at 402.59 125.73 0)
+		(at 542.29 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8480,7 +8953,7 @@
 	)
 	(global_label "SCL"
 		(shape passive)
-		(at 379.73 120.65 180)
+		(at 519.43 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8492,7 +8965,7 @@
 	)
 	(global_label "SYS"
 		(shape passive)
-		(at 379.73 125.73 180)
+		(at 519.43 125.73 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8504,7 +8977,7 @@
 	)
 	(global_label "SDA"
 		(shape passive)
-		(at 379.73 123.19 180)
+		(at 519.43 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8516,7 +8989,7 @@
 	)
 	(global_label "VBAT"
 		(shape passive)
-		(at 402.59 123.19 0)
+		(at 542.29 123.19 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8527,12 +9000,12 @@
 		(uuid "ef4e5c3c-c21f-5726-addb-913eea81a1e4")
 	)
 	(no_connect
-		(at 402.59 128.27)
+		(at 542.29 128.27)
 		(uuid "80021232-858f-5dd9-b9af-e4dea7b909bd")
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 379.73 128.27 180)
+		(at 519.43 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8544,7 +9017,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 434.34 124.46 0)
+		(at 314.96 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8552,7 +9025,7 @@
 		(dnp no)
 		(uuid "e13f1bd3-8218-5072-9953-89272ba0c54c")
 		(property "Reference" "C32"
-			(at 434.34 120.65 0)
+			(at 314.96 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8560,7 +9033,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 434.34 123.19 0)
+			(at 314.96 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8568,7 +9041,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 434.34 123.19 0)
+			(at 314.96 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8577,7 +9050,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 434.34 123.19 0)
+			(at 314.96 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8586,7 +9059,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 434.34 123.19 0)
+			(at 314.96 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8595,7 +9068,7 @@
 			)
 		)
 		(property "LCSC" "C15525"
-			(at 434.34 123.19 0)
+			(at 314.96 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8620,7 +9093,7 @@
 	)
 	(global_label "SYS"
 		(shape passive)
-		(at 434.34 120.65 90)
+		(at 314.96 140.97 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8632,7 +9105,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 434.34 128.27 270)
+		(at 314.96 148.59 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8644,7 +9117,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 464.82 124.46 0)
+		(at 347.98 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8652,7 +9125,7 @@
 		(dnp no)
 		(uuid "9a2a1117-0d53-5a4c-b2da-04e79549ba35")
 		(property "Reference" "C33"
-			(at 464.82 120.65 0)
+			(at 347.98 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8660,7 +9133,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 464.82 123.19 0)
+			(at 347.98 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8668,7 +9141,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 464.82 123.19 0)
+			(at 347.98 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8677,7 +9150,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 464.82 123.19 0)
+			(at 347.98 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8686,7 +9159,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 464.82 123.19 0)
+			(at 347.98 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8695,7 +9168,7 @@
 			)
 		)
 		(property "LCSC" "C52923"
-			(at 464.82 123.19 0)
+			(at 347.98 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8720,7 +9193,7 @@
 	)
 	(global_label "VBAT"
 		(shape passive)
-		(at 464.82 120.65 90)
+		(at 347.98 140.97 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8732,7 +9205,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 464.82 128.27 270)
+		(at 347.98 148.59 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8744,7 +9217,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 497.84 124.46 0)
+		(at 381 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8752,7 +9225,7 @@
 		(dnp no)
 		(uuid "87821c95-efb5-5613-bda7-6b21b3126c6e")
 		(property "Reference" "BT1"
-			(at 497.84 120.65 0)
+			(at 381 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8760,7 +9233,7 @@
 			)
 		)
 		(property "Value" "LIR2016"
-			(at 497.84 123.19 0)
+			(at 381 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8768,7 +9241,7 @@
 			)
 		)
 		(property "Footprint" "F91_custom:BAT_LIR2016_CLAMP"
-			(at 497.84 123.19 0)
+			(at 381 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8777,7 +9250,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 497.84 123.19 0)
+			(at 381 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8786,7 +9259,7 @@
 			)
 		)
 		(property "Description" "Pads under the cell (-) and under the clamp legs (+)"
-			(at 497.84 123.19 0)
+			(at 381 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8795,7 +9268,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 497.84 123.19 0)
+			(at 381 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8820,7 +9293,7 @@
 	)
 	(global_label "VBAT"
 		(shape passive)
-		(at 497.84 119.38 90)
+		(at 381 139.7 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8832,7 +9305,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 497.84 127 270)
+		(at 381 147.32 270)
 		(fields_autoplaced yes)
 		(effects
 			(font

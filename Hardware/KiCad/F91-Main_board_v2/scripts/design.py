@@ -29,10 +29,11 @@ mcu_pins = {
     '5': None,            # DIO0 spare
     '6': None,            # DIO1 spare
     '7': None,            # DIO2 (UART RX on the LaunchPad) spare, no pad
-    '8': 'PMIC_INT',      # DIO3  <- BQ25180 /INT (open drain, MCU pull-up); runs with SCL/SDA
+    '8': None,            # DIO3 spare (was PMIC_INT: moved to DIO6 so it does not cross SCL at U2)
     '9': 'SCL',           # DIO4
     '10': 'SDA',          # DIO5
-    '11': None, '12': None,                   # DIO6/7 (LaunchPad LEDs) spare
+    '11': 'PMIC_INT',     # DIO6 <- BQ25180 /INT (open drain, MCU pull-up); outermost, like A1 on U2
+    '12': None,           # DIO7 (LaunchPad LED) spare
     '13': VDDS,
     '14': None,  # spare (was ext-flash pin on the LaunchPad)
     '15': None,  # spare (was ext-flash pin on the LaunchPad)
@@ -109,9 +110,14 @@ comp('BT1', 'Device:Battery_Cell', 'F91_custom:BAT_LIR2016_CLAMP', 'LIR2016', ''
      v1=('ABS', 0, 0), bom=False, note='Pads under the cell (-) and under the clamp legs (+)')
 
 # ---------------------------------------------------------------- charger + buck
-comp('J2', 'Connector_Generic:Conn_01x04', 'F91_custom:FFC4_P1.0_SOLDER_B', 'FFC to charging PCB', '',
-     {'1': VIN, '2': VIN, '3': GND, '4': GND}, bom=False,
-     note='reverse-polarity Schottky, ESD diode and pull-down sit on the charging PCB')
+# charging input: two hand-soldered Ø1.2 brass pins in plated holes reach the magnetic pogo cable through
+# two Ø1.8 holes in the case back (no separate charging PCB). Reverse-polarity Schottky, ESD diode and
+# pull-down sit here, next to the pins.
+comp('P1', 'Connector:TestPoint', 'F91_custom:PIN_PTH_D1.25', 'charge + pin', '', {'1': CHG_IN}, bom=False)
+comp('P2', 'Connector:TestPoint', 'F91_custom:PIN_PTH_D1.25', 'charge GND pin', '', {'1': GND}, bom=False)
+comp('D1', 'Device:D_Schottky', 'F91_LCSC:SOD-882_L1.0-W0.6-RD', 'PMEG3002AEL', 'C478015', {'1': VIN, '2': CHG_IN})
+comp('D2', 'Device:D_TVS', 'F91_LCSC:X1SON-2_L1.0-W0.6-P0.65-BI-1', 'TPD1E10B06', 'C48260', {'1': CHG_IN, '2': GND})
+comp('R24', 'Device:R', R0402, '1M', 'C26083', {'1': CHG_IN, '2': GND})
 comp('C30', 'Device:C', C0402, '1uF', 'C52923', {'1': VIN, '2': GND})
 comp('U2', 'F91_LCSC:BQ25180YBGR', 'F91_LCSC:DSBGA-8_L1.6-W0.9-R2-C4-P0.40-BL', 'BQ25180', 'C3682423',
      {'A1': 'PMIC_INT', 'A2': VIN, 'B1': 'SCL', 'B2': SYS, 'C1': 'SDA', 'C2': VBAT, 'D1': None, 'D2': GND})  # TS/MR open: TS function off

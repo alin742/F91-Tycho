@@ -23,11 +23,14 @@ def rect_outline(x1, y1, x2, y2):
 
 
 def add_zones(b):
+    # read the outline BEFORE removing old zones: removing them first leaves the SWIG wrappers of
+    # later BOARD calls unusable in this KiCad build (re-running pour.py on a poured board crashed)
+    bb = b.GetBoardEdgesBoundingBox()
+    bb = (bb.GetX(), bb.GetY(), bb.GetRight(), bb.GetBottom())
     for z in list(b.Zones()):
         b.Remove(z)
-    bb = b.GetBoardEdgesBoundingBox()
-    x1, y1 = bb.GetX() / 1e6 - 1, bb.GetY() / 1e6 - 1
-    x2, y2 = bb.GetRight() / 1e6 + 1, bb.GetBottom() / 1e6 + 1
+    x1, y1 = bb[0] / 1e6 - 1, bb[1] / 1e6 - 1
+    x2, y2 = bb[2] / 1e6 + 1, bb[3] / 1e6 + 1
     gnd = b.FindNet('GND')
     for L in (pcbnew.F_Cu, pcbnew.B_Cu):
         z = pcbnew.ZONE(b)

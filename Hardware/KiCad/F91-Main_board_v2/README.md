@@ -13,22 +13,22 @@ Status: **design files generated, not yet built or tested.** See "Check before o
 | `F91-Main_board_v2.kicad_pcb` | Board: 24.4 × 24.4 mm, 2 layers, 0.8 mm |
 | `F91-Main_board_v2.kicad_pro/.kicad_dru` | JLCPCB 2-layer rules (0.1/0.1 mm tracks, vias 0.45/0.25 and 0.6/0.3, both standard price) + castellation / RF / antenna rules |
 | `lib/F91_LCSC.*` | Symbols, footprints, 3D models pulled from LCSC with easyeda2kicad (the footprints JLC places to) |
-| `lib/F91_custom.pretty` | Antenna, battery pads, castellations, holes, FFC pads (from v1 geometry) |
+| `lib/F91_custom.pretty` | Antenna, battery pads, castellations, holes, charge-pin holes (from v1 geometry) |
 | `scripts/` | The generators (see "Regenerating") |
-| `../F91-Charge_pad/` | Charging PCB glued inside the case back |
-| `../panel/` | JLC panel (2 × 2 main boards + 4 charging PCBs), fab export |
+| `../F91-Charge_pad/` | Obsolete charging PCB (replaced by the two charge pins) |
+| `../panel/` | JLC panel (2 × 2 main boards), fab export |
 
 ## Circuit summary
 - **Cell:** LIR2016 under the original clamp. Clamp = battery +, the cell's flat side = GND pads (as v1).
-- **Charger BQ25180** (U2, DSBGA-8, I2C 0x6A): power-up defaults are safe for the LIR2016 with no firmware (4.20 V, 10 mA, BUVLO 3.0 V). /INT → DIO3. TS/MR left open (TS off, no NTC).
+- **Charger BQ25180** (U2, DSBGA-8, I2C 0x6A): power-up defaults are safe for the LIR2016 with no firmware (4.20 V, 10 mA, BUVLO 3.0 V). /INT → DIO6 (pin 11). TS/MR left open (TS off, no NTC).
 - **Buck TPS62840** (U3, DSBGA-6): EN = SYS, VSET = 1.74 kΩ → 2.0 V, 60 nA Iq. L1 2.2 µH.
 - **CC2640R2** in internal-LDO mode: the v1 10 µH DC/DC inductor is removed, DCDC_SW is unconnected. Firmware must disable the DC/DC in ccfg (done in `Startup/ccfg_app_ble.c` for `F91_HW_V2`).
 - **Battery sense:** 10 MΩ / 1 MΩ divider + 100 nF into DIO23 (ADC). About 0.38 µA.
 - **Buttons:** the clamp arm (battery +) touches the castellation, which drives an N-FET gate (PMZB290UNE, 1 MΩ pull-down); the FET pulls DIO15/25/26 low → buttons are **active-low with internal pull-ups** (firmware `F91_HW_V2`).
 - **Display connector J1** (Molex 505066, same position as v1). Top row: GND, SCL, **VBAT (new, for the SSD1306 charge pump VDDB)**. Bottom row: **VDD 2.0 V (was battery)**, SDA, NC.
-- **Charging input:** 4 solder pads (J2, bottom right) for a 1.0 mm-pitch FFC ribbon from the charging PCB. Reverse-polarity Schottky, ESD diode and pull-down sit on the charging PCB.
-- **Programming:** cJTAG pads at the v1 jig positions: GND, VDD (sense only), TMS, TCK (the v1 jig fits). The v1 UART and RESET pads were dropped for space; the XDS110 resets the chip over cJTAG. Power the board from the battery pads or from 5 V on the FFC pads, never by back-feeding VDD.
-- **No external flash:** firmware updates over Bluetooth must use TI **on-chip OAD**. There was no room for an SPI flash: the bottom corners are cut by the board chamfer or taken by the charging PCB.
+- **Charging input:** two plated Ø1.3 mm holes (Ø1.7 pads) P1 (+, CHG_IN) and P2 (GND) at board (12.80, −3.40) / (11.19, −5.32), watch (9.75, 6.17) / (8.14, 8.09), 2.5 mm apart. Hand-solder a Ø1.2 mm brass pin in each, sticking 1.85 mm out of the bottom (flush with the inner face of the steel back); they meet the pogo cable through two Ø1.8 mm holes in the steel back. D1 (PMEG3002AEL reverse-polarity Schottky), D2 (TPD1E10B06 ESD) and R24 (1 M pull-down) sit next to them.
+- **Programming:** cJTAG pads at the v1 jig positions: GND, VDD (sense only), TMS, TCK (the v1 jig fits). The v1 UART and RESET pads were dropped for space; the XDS110 resets the chip over cJTAG. Power the board from the battery pads or from 5 V on the charge pins, never by back-feeding VDD.
+- **No external flash:** firmware updates over Bluetooth must use TI **on-chip OAD**. There was no room for an SPI flash: the bottom corners are cut by the board chamfer or taken by the charge pins.
 
 ## Display adapter rework (reuse the v1 adapter, no new board)
 The v1 adapter ties SSD1306 VDD (logic, max 3.3 V) and VDDB (charge pump, 3.3–4.2 V) to one connector pin. On v2 that pin carries 2.0 V, so the charge pump needs its own supply:
@@ -46,7 +46,7 @@ The v1 adapter ties SSD1306 VDD (logic, max 3.3 V) and VDDB (charge pump, 3.3–
 ## Check before ordering
 - JLC stock on order day: CC2640R2FRGZR (600 when checked), BQ25180YBGR, TPS62840YBGR.
 - In JLC's placement preview, check the rotation of U1 (QFN), U2/U3 (DSBGA), Q1–Q3 (DFN1006) and J1 (Molex).
-- Case-open measurements (TASKS.md): clamp outline, piezo position, case-back thickness, clamp-to-case-back contact. These confirm the charging-PCB corner and the FFC route.
+- Case-open measurements (TASKS.md): clamp outline, piezo position, case-back thickness, clamp-to-case-back contact. Check the mode-button clamp arm stays clear of the charge pins.
 
 ## Regenerating
 ```

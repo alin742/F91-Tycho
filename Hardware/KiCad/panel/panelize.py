@@ -1,4 +1,5 @@
-"""JLCPCB panel: 2 x 2 F91 main boards + 4 charging PCBs in one >= 70 x 70 mm frame.
+"""JLCPCB panel: 2 x 2 F91 main boards in one >= 70 x 70 mm frame (no charging PCB any more:
+the charge contacts are two brass pins in plated holes on the main board).
 
 Standard PCBA needs >= 70 x 70 mm, rails/frame, fiducials and tooling holes. Tabs avoid the
 castellated button contacts and the antenna edge; mouse bites (no V-cut: castellations).
@@ -14,7 +15,6 @@ from kikit import substrate as ksub
 
 HERE = Path(__file__).resolve().parent
 MAIN = HERE.parent / 'F91-Main_board_v2' / 'F91-Main_board_v2.kicad_pcb'
-CHG = HERE.parent / 'F91-Charge_pad' / 'F91-Charge_pad.kicad_pcb'
 OUT = HERE / 'F91-Kepler_panel.kicad_pcb'
 
 SPACE = 2.0          # mm between boards vertically (mouse-bite slot width)
@@ -52,16 +52,6 @@ def main():
                               netRenamer=lambda i, name, k=k: f'M{k}-{name}',
                               refRenamer=lambda i, ref, k=k: f'{ref}_M{k}')
             mains.append(len(panel.substrates) - 1)
-    # charging PCBs: two below the grid, two to the right (rotated)
-    gx1 = hpitch * 1 + BOARD / 2 + HSPACE + 2.5       # right column centre x
-    gy1 = pitch * 1 + BOARD / 2 + SPACE + 2.5        # bottom row centre y
-    chg_pos = [(0, gy1, 0), (hpitch, gy1, 0), (gx1, 0, 90), (gx1, pitch, 90)]
-    for i, (x, y, rot) in enumerate(chg_pos, start=1):
-        panel.appendBoard(str(CHG), P(x, y), origin=Origin.Center, rotationAngle=rot * deg,
-                          tolerance=int(1 * mm),
-                          netRenamer=lambda j, name, i=i: f'C{i}-{name}',
-                          refRenamer=lambda j, ref, i=i: f'{ref}_C{i}')
-
     panel.inheritDesignSettings(pcbnew.LoadBoard(str(MAIN)))
     panel.inheritProperties(pcbnew.LoadBoard(str(MAIN)))
 
