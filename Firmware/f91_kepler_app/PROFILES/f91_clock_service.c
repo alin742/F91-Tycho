@@ -52,6 +52,7 @@
 #include "gapbondmgr.h"
 #include "f91_utils.h"
 
+#include <ti/sysbios/hal/Seconds.h>
 #include "f91_clock_service.h"
 
 /*********************************************************************
@@ -442,6 +443,9 @@ static bStatus_t f91_clock_service_ReadAttrCB( uint16_t connHandle, gattAttribut
   if ( pAttr->type.len == ATT_UUID_SIZE ) {
         // 128-bit UUID
     if (!memcmp(pAttr->type.uuid, f91_clock_serviceChar1UUID, ATT_UUID_SIZE)) {
+      // POWER: refresh from the RTC on demand instead of having the clock
+      // task wake every second just to keep this value current.
+      f91ClockServiceChar1 = Seconds_get();
       *pLen = sizeof(uint32_t);
       memcpy(pValue, pAttr->pValue + offset, *pLen);
       

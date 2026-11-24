@@ -1,0 +1,104 @@
+** Drc report for F91-Kepler_panel.kicad_pcb **
+** Created on 2026-11-22T15:46:51 **
+** Report includes: Errors **
+
+** Found 20 DRC violations **
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(22.3778 mm, 12.2090 mm): Arc on Edge.Cuts
+    @(17.2000 mm, -2.7536 mm): Zone 'GND_F_1' [M2-GND] on F.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(-7.0222 mm, 12.2090 mm): Arc on Edge.Cuts
+    @(-12.2000 mm, -2.7536 mm): Zone 'GND_F_1' [M1-GND] on F.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(-7.0222 mm, 38.6090 mm): Arc on Edge.Cuts
+    @(-12.2000 mm, 23.6464 mm): Zone 'GND_F_1' [M3-GND] on F.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(22.3785 mm, 38.6094 mm): Arc on Edge.Cuts
+    @(17.2000 mm, 23.6464 mm): Zone 'GND_F_1' [M4-GND] on F.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(22.3785 mm, 38.6094 mm): Arc on Edge.Cuts
+    @(17.2000 mm, 23.6464 mm): Zone 'GND_B_1' [M4-GND] on B.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(22.3778 mm, 12.2090 mm): Arc on Edge.Cuts
+    @(17.2000 mm, -2.7536 mm): Zone 'GND_B_1' [M2-GND] on B.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(-7.0222 mm, 12.2090 mm): Arc on Edge.Cuts
+    @(-12.2000 mm, -2.7536 mm): Zone 'GND_B_1' [M1-GND] on B.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1991 mm)
+    Rule: board setup constraints edge; error
+    @(-7.0222 mm, 38.6090 mm): Arc on Edge.Cuts
+    @(-12.2000 mm, 23.6464 mm): Zone 'GND_B_1' [M3-GND] on B.Cu, priority 0
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(18.1760 mm, -6.7885 mm): Segment on Edge.Cuts
+    @(17.0468 mm, -4.8630 mm): PTH pad 1 [M2-BTN2_PAD] of SW2_M2
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-11.9427 mm, 3.2168 mm): Segment on Edge.Cuts
+    @(-12.3532 mm, 4.8170 mm): PTH pad 1 [M1-BTN1_PAD] of SW1_M1
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0571 mm)
+    Rule: board setup constraints edge; error
+    @(11.0067 mm, 7.0767 mm): Segment on Edge.Cuts
+    @(12.3268 mm, 5.0170 mm): PTH pad 1 [M1-BTN3_PAD] of SW3_M1
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.1152 mm)
+    Rule: board setup constraints edge; error
+    @(-12.1997 mm, -2.7534 mm): Segment on Edge.Cuts
+    @(-12.3532 mm, -4.8630 mm): PTH pad 1 [M1-BTN2_PAD] of SW2_M1
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0571 mm)
+    Rule: board setup constraints edge; error
+    @(11.0067 mm, 33.4767 mm): Segment on Edge.Cuts
+    @(12.3268 mm, 31.4170 mm): PTH pad 1 [M3-BTN3_PAD] of SW3_M3
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(40.6224 mm, 33.1527 mm): Segment on Edge.Cuts
+    @(41.7268 mm, 31.4170 mm): PTH pad 1 [M4-BTN3_PAD] of SW3_M4
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0301 mm)
+    Rule: board setup constraints edge; error
+    @(18.0993 mm, 6.5530 mm): Segment on Edge.Cuts
+    @(17.0468 mm, 4.8170 mm): PTH pad 1 [M2-BTN1_PAD] of SW1_M2
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(17.6216 mm, 22.8934 mm): Segment on Edge.Cuts
+    @(17.0468 mm, 21.5370 mm): PTH pad 1 [M4-BTN2_PAD] of SW2_M4
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-11.7784 mm, 22.8934 mm): Segment on Edge.Cuts
+    @(-12.3532 mm, 21.5370 mm): PTH pad 1 [M3-BTN2_PAD] of SW2_M3
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(40.6521 mm, 5.9453 mm): Segment on Edge.Cuts
+    @(41.7268 mm, 5.0170 mm): PTH pad 1 [M2-BTN3_PAD] of SW3_M2
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-11.8890 mm, 29.7857 mm): Segment on Edge.Cuts
+    @(-12.3532 mm, 31.2170 mm): PTH pad 1 [M3-BTN1_PAD] of SW1_M3
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.2000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(17.5110 mm, 29.7857 mm): Segment on Edge.Cuts
+    @(17.0468 mm, 31.2170 mm): PTH pad 1 [M4-BTN1_PAD] of SW1_M4
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Silkscreen clearance
+    - Silkscreen clipped by solder mask
+    - Silkscreen clipped by board edge
+    - Text height out of range
+    - Footprint component type doesn't match footprint pads
+    - Footprint not found in libraries
+    - Footprint doesn't match copy in library
+
+** End of Report **

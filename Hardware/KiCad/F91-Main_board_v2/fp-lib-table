@@ -1,0 +1,10 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "F91_LCSC")(type "KiCad")(uri "${KIPRJMOD}/lib/F91_LCSC.pretty")(options "")(descr "LCSC/JLCPCB footprints (easyeda2kicad)"))
+	(lib (name "F91_custom")(type "KiCad")(uri "${KIPRJMOD}/lib/F91_custom.pretty")(options "")(descr "F91 Kepler custom footprints from v1 geometry"))
+	(lib (name "Capacitor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Capacitor_SMD.pretty")(options "")(descr ""))
+	(lib (name "Resistor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty")(options "")(descr ""))
+	(lib (name "Inductor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Inductor_SMD.pretty")(options "")(descr ""))
+	(lib (name "Package_DFN_QFN")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Package_DFN_QFN.pretty")(options "")(descr ""))
+	(lib (name "TestPoint")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/TestPoint.pretty")(options "")(descr ""))
+)

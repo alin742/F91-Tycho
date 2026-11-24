@@ -1,0 +1,5 @@
+# intermediate router/placer snapshots and debug renders
+work/
+*.lck
+fp-info-cache
+*-backups/

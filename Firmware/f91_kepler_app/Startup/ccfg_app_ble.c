@@ -70,4 +70,11 @@
 #ifdef CACHE_AS_RAM
 #define SET_CCFG_SIZE_AND_DIS_FLAGS_DIS_GPRAM  0x0 /* Enable GPRAM */
 #endif //CACHE_AS_RAM
+#include "../Application/f91_board.h"
+#ifdef F91_HW_V2
+// v2 board: the CC2640R2 runs from the TPS62840 2.0 V rail in internal-LDO (GLDO) mode.
+// There is no DC/DC inductor on DCDC_SW, so the internal DC/DC must stay off.
+#define SET_CCFG_MODE_CONF_DCDC_RECHARGE  0x1   /* 1 = do not use DC/DC during recharge in power-down */
+#define SET_CCFG_MODE_CONF_DCDC_ACTIVE    0x1   /* 1 = do not use DC/DC in active mode */
+#endif
 #include <startup_files/ccfg.c>

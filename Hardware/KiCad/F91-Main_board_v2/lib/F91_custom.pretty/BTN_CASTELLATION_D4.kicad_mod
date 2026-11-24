@@ -1,0 +1,13 @@
+(footprint "BTN_CASTELLATION_D4"
+	(version 20260206)
+	(generator "f91_gen")
+	(layer "F.Cu")
+	(descr "half-hole button contact touched by the clamp arm")
+	(property "Reference" "REF**" (at 0 -1.5 0) (layer "F.SilkS") (uuid "c1bbd443-42a9-4fa0-807b-a3dbef628d14")
+		(effects (font (size 0.6 0.6) (thickness 0.1))))
+	(property "Value" "BTN_CASTELLATION_D4" (at 0 1.5 0) (layer "F.Fab") (uuid "1ed386bd-c8c7-43c1-bbe6-f33ae6eddc31")
+		(effects (font (size 0.6 0.6) (thickness 0.1))))
+	(attr through_hole exclude_from_pos_files exclude_from_bom)
+	(pad "1" thru_hole circle (at 0.0000 0.0000) (size 4.0 4.0) (drill 2.8) (layers "*.Cu" "*.Mask") (uuid "c5d585c6-7d71-4619-ac16-b9628ae63a61"))
+	(fp_rect (start -2.100 -2.100) (end 2.100 2.100) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "0acecf23-b0ed-4627-a901-75ac31a00d89"))
+)

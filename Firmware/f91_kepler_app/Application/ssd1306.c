@@ -22,6 +22,7 @@
  * INCLUDES
  */
 #include "ssd1306.h"
+#include "f91_i2c.h"
 #include "fonts_icons.h"
 #include "font_5x7.h"
 #include "f91_utils.h"
@@ -74,6 +75,15 @@
 #define SET_PRECHARGE       0xd9
 #define SET_VCOM_DESEL      0xdb
 #define SET_CHARGE_PUMP     0x8d
+#define CHARGE_PUMP_ON      0x14
+#define CHARGE_PUMP_OFF     0x10
+
+// POWER: OLED panel current scales roughly with contrast, so this directly
+// sets how much the display draws while it is on. Was 0xff (maximum).
+// 0x7f is the SSD1306 reset default; raise it if the screen is too dim.
+#ifndef SSD1306_CONTRAST
+#define SSD1306_CONTRAST    0x7f
+#endif
 
 /*********************************************************************
  * TYPEDEFS
@@ -136,10 +146,8 @@ void ssd1306_command(uint8_t command) {
  *
  */
 void ssd1306_clear_buffer(uint8_t *buffer, int size) {
-    ssd1306_set_position(0, 0);
     memset(ssd1306_display_buffer, 0, sizeof(ssd1306_display_buffer)); //Reset buffer
     ssd1306_display_buffer[0]=0x40;
-    ssd1306_set_position(0,0);
 }
 
 /*********************************************************************
@@ -235,10 +243,8 @@ void ssd1306_set_position(uint8_t column, uint8_t page) {
  *
  */
 void ssd1306_init(void) {//Init Sequence
-    /* Create I2C for usage */
-    I2C_Params_init(&i2c_params);
-    i2c_params.bitRate = I2C_400kHz;
-    i2c_connection = I2C_open(Board_I2C0, &i2c_params);
+    /* I2C0 is shared with the BQ25180 charger on the v2 board: open it once (f91_i2c.c) */
+    i2c_connection = F91I2C_init();
     if (i2c_connection == NULL) {
         while (1);
     }
@@ -274,8 +280,9 @@ void ssd1306_init(void) {//Init Sequence
         ssd1306_command(SET_DISP_START_LINE);
 
         //Set Charge Pump (0x10 External, 0x14 Internal DC)
+        // POWER: left off until the display is actually turned on.
         ssd1306_command(SET_CHARGE_PUMP);
-        ssd1306_command(0x14);
+        ssd1306_command(CHARGE_PUMP_OFF);
 
         //Resolution and layout
         ssd1306_command(SET_SEG_REMAP);
@@ -289,7 +296,7 @@ void ssd1306_init(void) {//Init Sequence
 
         //Set Contrast
         ssd1306_command(SET_CONTRAST);
-        ssd1306_command(0xff);
+        ssd1306_command(SSD1306_CONTRAST);
 
         //Set Pre-charge period (0x22 external, 0xF1 internal)
         ssd1306_command(SET_PRECHARGE);
@@ -331,6 +338,9 @@ void ssd1306_init(void) {//Init Sequence
  */
 void ssd1306_update( void ) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
+    // POWER: the cursor only matters right before streaming the frame, so it is
+    // set once here instead of in every drawing function.
+    ssd1306_set_position(0, 0);
     ssd1306_send_buffer(ssd1306_display_buffer, sizeof(ssd1306_display_buffer));
     Semaphore_post(semHandle);
 }
@@ -366,7 +376,6 @@ void ssd1306_clear( void ) {
 void ssd1306_display_text(char *text, uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     while (*text != '\0') {
         uint8_t b_x, b_y, dataByte;
         for(b_x = 0; b_x<=4; b_x++) {
@@ -403,7 +412,6 @@ void ssd1306_display_text(char *text, uint8_t x, uint8_t y, bool erase) {
 void ssd1306_display_number(uint8_t number, uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t page, b_x, b_y, dataByte;
     for (page = 0; page<4; page++) {
         for(b_x = 0; b_x<=14; b_x++) {
@@ -437,7 +445,6 @@ void ssd1306_display_number(uint8_t number, uint8_t x, uint8_t y, bool erase) {
 void ssd1306_display_small_number(uint8_t number, uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t page, b_x, b_y, dataByte;
     for (page = 0; page<2; page++) {
         for(b_x = 0; b_x<=8; b_x++) {
@@ -470,7 +477,6 @@ void ssd1306_display_small_number(uint8_t number, uint8_t x, uint8_t y, bool era
 void ssd1306_display_semicolon(uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t page, b_x, b_y, dataByte;
     for (page = 0; page<4; page++) {
         for(b_x = 0; b_x<=2; b_x++) {
@@ -503,7 +509,6 @@ void ssd1306_display_semicolon(uint8_t x, uint8_t y, bool erase) {
 void ssd1306_display_pm(uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t b_x, b_y, dataByte;
     for(b_x = 0; b_x<=11; b_x++) {
         dataByte = pm_12x7[b_x];
@@ -535,7 +540,6 @@ void ssd1306_display_pm(uint8_t x, uint8_t y, bool erase) {
 void ssd1306_display_notification(uint8_t icon, uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t page, b_x, b_y, dataByte;
     for (page = 0; page<2; page++) {
         for(b_x = 0; b_x<=11; b_x++) {
@@ -568,7 +572,6 @@ void ssd1306_display_full_notification(uint8_t type, char *text) {
     bool needEllipsis = false;
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t page, b_x, b_y, dataByte;
     for (page = 0; page<5; page++) {
         for(b_x = 0; b_x<=95; b_x++) {
@@ -577,6 +580,7 @@ void ssd1306_display_full_notification(uint8_t type, char *text) {
             } else if (type == INCOMING_TEXT) {
                 dataByte = text_from_96x39[b_x + (96*page)];
             } else {
+                Semaphore_post(semHandle); // don't leave the display locked
                 return;
             }
             for(b_y=0; b_y<=8; b_y++){
@@ -622,7 +626,6 @@ void ssd1306_display_full_notification(uint8_t type, char *text) {
 void ssd1306_display_ellipsis(uint8_t x, uint8_t y, bool erase) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
 
-    ssd1306_set_position(0, 0);
     uint8_t b_x, b_y, dataByte;
     for(b_x = 0; b_x<=4; b_x++) {
         dataByte = ellipsis_5x7[b_x];
@@ -651,11 +654,18 @@ void ssd1306_display_ellipsis(uint8_t x, uint8_t y, bool erase) {
  */
 void ssd1306_toggle_display ( bool state ) {
     Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
+    // POWER: SSD1306 power-on/off sequence from the datasheet: enable the
+    // internal charge pump only while the panel is lit, so sleep current
+    // drops to the controller's few-uA standby level.
     if (state) {
+        ssd1306_command(SET_CHARGE_PUMP);
+        ssd1306_command(CHARGE_PUMP_ON);
         ssd1306_command(SET_DISP_ON);
         displayState = true;
     } else {
         ssd1306_command(SET_DISP_OFF);
+        ssd1306_command(SET_CHARGE_PUMP);
+        ssd1306_command(CHARGE_PUMP_OFF);
         displayState = false;
     }
     Semaphore_post(semHandle);
@@ -692,3 +702,46 @@ bool ssd1306_getState() {
 
 /*********************************************************************
 *********************************************************************/
+
+
+/*********************************************************************
+ * @fn      ssd1306_display_battery()
+ *
+ * @brief   Draws a 9x7 battery (8-px body + 1-px terminal) at (x, y), filled to
+ *          percent in 6 steps, with a '+' when charging. Fits the free gap in the
+ *          status bar (x 56..64). Buffer only, call ssd1306_update().
+ */
+void ssd1306_display_battery(uint8_t x, uint8_t y, uint8_t percent, bool charging) {
+    uint8_t i, j, fill;
+    Semaphore_pend(semHandle, BIOS_WAIT_FOREVER);
+    for (i = 0; i < 9; i++) {            /* clear the area */
+        for (j = 0; j < 7; j++) {
+            ssd1306_draw_pixel(x + i, y + j, true);
+        }
+    }
+    for (i = 0; i < 8; i++) {            /* body outline 8 x 7 */
+        ssd1306_draw_pixel(x + i, y, false);
+        ssd1306_draw_pixel(x + i, y + 6, false);
+    }
+    for (j = 0; j < 7; j++) {
+        ssd1306_draw_pixel(x, y + j, false);
+        ssd1306_draw_pixel(x + 7, y + j, false);
+    }
+    for (j = 2; j < 5; j++) {            /* terminal */
+        ssd1306_draw_pixel(x + 8, y + j, false);
+    }
+    fill = (uint8_t)(((uint16_t)(percent > 100 ? 100 : percent) * 6 + 50) / 100);   /* 0..6 columns */
+    for (i = 0; i < fill; i++) {
+        for (j = 2; j < 5; j++) {
+            ssd1306_draw_pixel(x + 1 + i, y + j, false);
+        }
+    }
+    if (charging) {                      /* '+' centred on column 4, inverted against the fill */
+        static const uint8_t plus[5][2] = { {4, 3}, {3, 3}, {5, 3}, {4, 2}, {4, 4} };
+        for (i = 0; i < 5; i++) {
+            bool filled = (plus[i][0] - 1) < fill;          /* fill covers columns 1..fill */
+            ssd1306_draw_pixel(x + plus[i][0], y + plus[i][1], filled);
+        }
+    }
+    Semaphore_post(semHandle);
+}

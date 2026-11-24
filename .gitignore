@@ -1,0 +1,20 @@
+# Python / tool caches
+__pycache__/
+*.pyc
+tools/
+Hardware/SolidCraft/solidcraft.log
+
+# Third-party files that may not be redistributed (kept locally)
+datasheets/
+Hardware/reference/grabcad-f91w/
+Hardware/SolidCraft/compare/
+Hardware/SolidCraft/textures/f91w_face_print.png
+Hardware/SolidCraft/textures/face_crop.png
+Hardware/SolidCraft/textures/print_raster.png
+Hardware/SolidCraft/F91_Watch_assembly.sc
+Hardware/SolidCraft/F91_Kepler_assembly.sc
+Hardware/SolidCraft/f91_assembly.json
+Hardware/SolidCraft/f91_watch_assembly.json
+
+# Personal photos (kept locally)
+Hardware/images/measurements/

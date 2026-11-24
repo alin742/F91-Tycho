@@ -80,6 +80,11 @@ extern void F91Clock_init(void);
 void F91Clock_processCharChangeEvt(uint8_t paramID);
 
 /*
+ * Wake the clock task so it redraws immediately (e.g. display just turned on).
+ */
+extern void F91Clock_refreshDisplay(void);
+
+/*
  * Task Event Processor for clock module
  */
 extern void F91Clock_processEvent(void);

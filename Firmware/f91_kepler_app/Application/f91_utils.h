@@ -51,7 +51,7 @@
 #include <ti/sysbios/knl/Semaphore.h>
 #include <ti/sysbios/knl/Mailbox.h>
 
-#define IS_DEV_BOARD
+#include "f91_board.h"   /* board selection: IS_DEV_BOARD / F91_HW_V2 / v1 */
 
 /*********************************************************************
  * CONSTANTS
@@ -68,7 +68,7 @@
  */
 typedef struct MsgObj {
    uint8_t    id;
-   void       *value;
+   uint32_t   value;  // Copied by value: the sender's stack frame is gone by the time the clock task reads it.
 } MsgObj;
 
 /*

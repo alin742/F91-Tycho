@@ -1,4 +1,20 @@
-# F91 Kepler
+# F91 Tycho
+
+F91 Tycho is a continuation of **[F91 Kepler](https://github.com/drpykachu/F91_Kepler)** by Pegor (originally on [GitLab](https://gitlab.com/_Pegor/kepler_fw)), a full replacement of the Casio F-91W internals with an OLED display and a Bluetooth CC2640R2 MCU. All credit for the original design goes to them; this repo keeps their full history and MIT license.
+
+What's new here:
+- **Rechargeable v2:** LIR2016 cell, BQ25180 charger, TPS62840 buck, and a small charging PCB in the case back's dip with a magnetic pogo cable ([main board](Hardware/KiCad/F91-Main_board_v2/README.md), [charging PCB](Hardware/KiCad/F91-Charge_pad/README.md), [JLC panel](Hardware/KiCad/panel/README.md)).
+- **KiCad import** of the original DipTrace boards (`Hardware/KiCad/`).
+- **Firmware:** battery-life work, v2 charger/battery support (written, not yet compiled).
+- **SolidCraft** case + electronics model (`Hardware/SolidCraft/`).
+- Open work: [TASKS.md](TASKS.md).
+
+Code identifiers (`f91_kepler.c`, project names, file names) keep the Kepler name so the original build setup still works.
+
+---
+
+## Original F91 Kepler README
+
 ## 8/8/25 - This project hasn't been active for a while, but I have kept it around for anyone interested in it or wants to draw inspiration from it. I have moved it from its [original repo](https://gitlab.com/_Pegor/kepler_fw) since I use GitHub more these days. 
 <p align="center">
   <img src="Hardware/images/main.jpg" alt="Main view" width="600"/>

@@ -26,7 +26,9 @@
 #include "f91_utils.h"
 #include "f91_kepler.h"
 #include "f91_buttons.h"
+#include "f91_power.h"
 #include "f91_notification.h"
+#include "f91_clock.h"
 
 #include <ti/display/Display.h>
 #include <ti/sysbios/BIOS.h>
@@ -66,17 +68,28 @@ static PIN_State buttonPinState;
  * Application button pin configuration table:
  *   - Buttons interrupts are configured to trigger on falling edge.
  */
-#ifdef IS_DEV_BOARD
+#if defined(IS_DEV_BOARD)
   #define PIN_PULL_TYPE PIN_PULLUP
   #define PIN_PRESS_IRQ  PIN_IRQ_NEGEDGE
   #define PIN_RELEASE_IRQ PIN_IRQ_POSEDGE
+  #define BUTTON_ACTIVE_LEVEL 0
   #define BUTTON_0 Board_BUTTON0
   #define BUTTON_1 Board_BUTTON1
   #define BUTTON_2 Board_BUTTON2
-#else //NOT DEV BOARD
+#elif defined(F91_HW_V2)
+  // v2: the clamp (battery +) drives an N-FET gate; the FET pulls the DIO low -> active low.
+  #define PIN_PULL_TYPE PIN_PULLUP
+  #define PIN_PRESS_IRQ  PIN_IRQ_NEGEDGE
+  #define PIN_RELEASE_IRQ PIN_IRQ_POSEDGE
+  #define BUTTON_ACTIVE_LEVEL 0
+  #define BUTTON_0 0x0000000F // IO Id 15
+  #define BUTTON_1 0x00000019 // IO Id 25
+  #define BUTTON_2 0x0000001A // IO Id 26
+#else // v1 watch board
   #define PIN_PULL_TYPE PIN_PULLDOWN
   #define PIN_PRESS_IRQ  PIN_IRQ_POSEDGE
   #define PIN_RELEASE_IRQ PIN_IRQ_NEGEDGE
+  #define BUTTON_ACTIVE_LEVEL 1
   #define BUTTON_0 0x0000000F // IO Id 15
   #define BUTTON_1 0x00000019 // IO Id 25
   #define BUTTON_2 0x0000001A // IO Id 26
@@ -84,8 +97,8 @@ static PIN_State buttonPinState;
 
 
 PIN_Config buttonPinTable[] = {
-    BUTTON_0 | PIN_INPUT_EN | PIN_PULL_TYPE | PIN_IRQ_NEGEDGE,
-    BUTTON_1 | PIN_INPUT_EN | PIN_PULL_TYPE | PIN_IRQ_NEGEDGE,
+    BUTTON_0 | PIN_INPUT_EN | PIN_PULL_TYPE | PIN_PRESS_IRQ,
+    BUTTON_1 | PIN_INPUT_EN | PIN_PULL_TYPE | PIN_PRESS_IRQ,
     PIN_TERMINATE
 };
 
@@ -124,8 +137,9 @@ static void F91Buttons_buttonDebounceSwiFxn(UArg buttonId)
   button_state_t buttonMsg = { .pinId = buttonId };
   uint8_t        sendMsg   = FALSE;
 
-  // Get current value of the button pin after the clock timeout
-  uint8_t buttonPinVal = PIN_getInputValue(buttonId);
+  // Get current value of the button pin after the clock timeout, normalised so that
+  // buttonPinVal == 1 means "released" whatever the board's polarity
+  uint8_t buttonPinVal = (PIN_getInputValue(buttonId) != BUTTON_ACTIVE_LEVEL);
 
   // Set interrupt direction to opposite of debounced state
   // If button is now released (button is active low, so release is high)
@@ -295,7 +309,16 @@ void F91Buttons_processButtonPress(button_state_t *buttonInfo)
         F91Notification_resetNotificationState();
       } else {
         F91Notification_update(NOTIFICATION_BAR); //Add notifications if any.
+#ifdef F91_HW_V2
+        {
+          // v2 board: battery level + charging mark in the status-bar gap
+          const F91PowerStatus_t *ps = F91Power_status();
+          ssd1306_display_battery(56, 1, ps->percent, ps->charge == F91_CHG_CHARGING);
+        }
+#endif
         ssd1306_toggle_display(true);
+        // Wake the (otherwise sleeping) clock task so the time is drawn now.
+        F91Clock_refreshDisplay();
         Util_restartClock(&startDispClock, DISPLAY_TIMEOUT);
       }
     }

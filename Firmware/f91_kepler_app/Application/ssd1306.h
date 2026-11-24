@@ -111,6 +111,7 @@ extern void ssd1306_display_ellipsis( uint8_t x, uint8_t y, bool erase);
 extern void ssd1306_toggle_display( bool state );
 extern bool ssd1306_isReady(void);
 extern bool ssd1306_getState(void);
+extern void ssd1306_display_battery(uint8_t x, uint8_t y, uint8_t percent, bool charging);
 
 /*********************************************************************
 *********************************************************************/

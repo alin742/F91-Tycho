@@ -1,0 +1,13 @@
+(version 1)
+# The button contacts are castellated half-holes on purpose (clamp arm touches them, as in v1).
+(rule "castellations may touch the edge"
+    (condition "A.memberOfFootprint('SW1') || A.memberOfFootprint('SW2') || A.memberOfFootprint('SW3')")
+    (constraint edge_clearance (min -10mm)))
+# v1 RF chain copied verbatim; it was built and works. Allow its 0.18/0.28 mm geometry and tight pair spacing.
+(rule "v1 RF pair"
+    (condition "A.NetName == 'RF_P' && B.NetName == 'RF_N'")
+    (constraint clearance (min 0.07mm)))
+# No copper of other nets near the antenna feed / meander (both layers)
+(rule "antenna keep-clear"
+    (condition "A.NetName == 'ANT' && B.NetName != 'ANT'")
+    (constraint clearance (min 0.3mm)))

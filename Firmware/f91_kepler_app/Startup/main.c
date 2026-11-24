@@ -58,6 +58,7 @@
 #include <ti/drivers/power/PowerCC26XX.h>
 #include <ti/drivers/GPIO.h>
 #include <ti/drivers/I2C.h>
+#include <ti/drivers/ADC.h>
 
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Clock.h>
@@ -183,6 +184,7 @@ int main()
 
   GPIO_init();
   I2C_init();
+  ADC_init();   // v2 board: battery voltage on DIO23 (f91_power.c)
 
 #ifdef CC1350_LAUNCHXL
   // Enable 2.4GHz Radio

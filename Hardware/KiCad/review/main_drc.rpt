@@ -1,0 +1,2042 @@
+** Drc report for F91-Main_board_NF.kicad_pcb **
+** Created on 2026-11-21T14:52:07 **
+** Report includes: Errors, Warnings **
+
+** Found 383 DRC violations **
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(6.2400 mm, 13.1200 mm): Track [Net 1] on Top, length 1.1200 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(6.2400 mm, 13.1200 mm): Track [Net 1] on Top, length 1.1200 mm
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.8110 mm, 7.9740 mm): Segment of U3 on F.Mask
+    @(2.9400 mm, 8.9600 mm): Via [Net 31] on Top - Bottom
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.8110 mm, 7.9740 mm): Segment of U3 on F.Mask
+    @(2.9400 mm, 8.9600 mm): Via [Net 31] on Top - Bottom
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.8110 mm, 7.9740 mm): Segment of U3 on F.Mask
+    @(2.9400 mm, 8.9600 mm): Track [Net 31] on Top, length 0.5100 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.8110 mm, 7.9740 mm): Segment of U3 on F.Mask
+    @(2.9400 mm, 8.9600 mm): Track [Net 31] on Top, length 0.5100 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(2.3900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(5.0900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(4.1900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(3.2900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.9000 mm, 10.4300 mm): Track [Net 34] on Top, length 2.9605 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.6800 mm): Track [Net 1] on Top, length 0.6223 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(0.5900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(0.7900 mm, 12.5600 mm): Track [Net 31] on Top, length 3.7500 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(0.5900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(0.7900 mm, 12.5600 mm): Pad 2 [Net 31] of R2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(0.5900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.1200 mm, 13.4600 mm): Track [Net 1] on Top, length 4.4300 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.4700 mm, 10.9400 mm): Track [Net 30] on Top, length 1.8809 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.4700 mm, 10.9400 mm): Track [Net 30] on Top, length 1.8809 mm
+    @(5.5400 mm, 11.4770 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.4700 mm, 10.9400 mm): Track [Net 30] on Top, length 1.8809 mm
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.7900 mm, 12.5600 mm): Track [Net 1] on Top, length 0.0400 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(7.3600 mm, 13.1200 mm): Track [Net 1] on Top, length 1.2445 mm
+    @(8.1900 mm, 12.2400 mm): Pad 1 [Net 0] of RESET on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(6.8000 mm, 12.2700 mm): Pad 2 [Net 30] of R3 on Top
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.2700 mm): Track [Net 1] on Top, length 0.4100 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.3100 mm, 13.4600 mm): Track [Net 1] on Top, length 3.4365 mm
+    @(-4.0800 mm, 12.3500 mm): Pad 1 [Net 26] of Pad5 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-2.1100 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.1200 mm, 13.4600 mm): Track [Net 1] on Top, length 4.4300 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.0867 mm, 6.1368 mm): Track [Net 11] on Top, length 2.3098 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-2.0867 mm, 6.1368 mm): Track [Net 11] on Top, length 2.3098 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-3.6424 mm, 5.9600 mm): Pad 2 [Net 0] of Y2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-3.1191 mm, 10.0330 mm): Segment of Y2 on F.Mask
+    @(-3.7200 mm, 4.5035 mm): Track [Net 11] on Top, length 0.0535 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-0.3100 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.1200 mm, 13.4600 mm): Track [Net 1] on Top, length 4.4300 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(8.1900 mm, 12.2400 mm): Pad 1 [Net 0] of RESET on Top
+    @(8.2400 mm, 12.2400 mm): Track [Net 1] on Top, length 2.6800 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.8000 mm, 12.2700 mm): Pad 1 [Net 1] of R3 on Top
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.9400 mm, 11.4770 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.7900 mm, 11.1100 mm): Track [Net 1] on Top, length 1.4500 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+    @(5.8000 mm, 12.2700 mm): Track [Net 1] on Top, length 0.2000 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-1.2100 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.1200 mm, 13.4600 mm): Track [Net 1] on Top, length 4.4300 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.8300 mm, 12.7500 mm): Track [Net 1] on Top, length 1.0041 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.7900 mm, 12.5600 mm): Pad 1 [Net 1] of R2 on Top
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(11.9000 mm, 4.9100 mm): Pad 1 [Net 37] of R6 on Bottom
+    @(12.8200 mm, 4.2800 mm): Track [Net 20] on Bottom, length 2.0930 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.4100 mm, -1.7196 mm): Track [Net 0] on Top, length 0.4096 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.9900 mm, -1.5300 mm): Track [Net 0] on Top, length 1.3200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.9200 mm, -5.9300 mm): Track [Net 0] on Top, length 0.6400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.7300 mm, -7.5300 mm): Track [Net 0] on Top, length 0.6000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0200 mm, 3.7800 mm): Track [Net 0] on Top, length 0.8200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.4500 mm, 7.8100 mm): Track [Net 0] on Top, length 1.6576 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.1500 mm, 8.5800 mm): Track [Net 0] on Top, length 0.2300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 7.9400 mm): Track [Net 0] on Top, length 0.1697 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.0600 mm, -0.4500 mm): Track [Net 0] on Top, length 0.5300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.2300 mm, 7.8200 mm): Track [Net 0] on Top, length 2.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, -0.4393 mm): Track [Net 0] on Top, length 0.3507 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.2307 mm, -5.6193 mm): Track [Net 0] on Top, length 0.4394 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.4500 mm, 6.1524 mm): Track [Net 0] on Top, length 0.2720 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.1300 mm, -7.5300 mm): Track [Net 0] on Top, length 1.4284 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.7100 mm, 5.5800 mm): Track [Net 0] on Top, length 0.2121 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.6400 mm, -5.3300 mm): Track [Net 0] on Top, length 0.6223 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.2700 mm, 8.7300 mm): Track [Net 0] on Top, length 3.4051 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.9900 mm, -0.2100 mm): Track [Net 0] on Top, length 0.0990 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.5900 mm, -0.4500 mm): Track [Net 0] on Top, length 0.5657 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.4100 mm, -1.3100 mm): Track [Net 0] on Top, length 0.8768 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.0000 mm, -5.8500 mm): Track [Net 0] on Top, length 0.6900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0200 mm, 2.9600 mm): Track [Net 0] on Top, length 0.7495 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.6400 mm, -3.7000 mm): Track [Net 0] on Top, length 1.6300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0600 mm, 0.8200 mm): Track [Net 0] on Top, length 0.3253 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0100 mm, 5.0200 mm): Track [Net 0] on Top, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, 1.0510 mm): Track [Net 0] on Top, length 1.4903 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.8800 mm, -6.5200 mm): Track [Net 0] on Top, length 0.5500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0900 mm, 2.9600 mm): Track [Net 0] on Top, length 0.0700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.5600 mm, -5.9300 mm): Track [Net 0] on Top, length 0.8768 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0100 mm, 4.7700 mm): Track [Net 0] on Top, length 1.4001 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.4100 mm, -1.7196 mm): Track [Net 0] on Top, length 1.6504 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.2181 mm, 8.6470 mm): Track [Net 0] on Top, length 0.6051 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.2900 mm, 1.0500 mm): Track [Net 0] on Top, length 0.7100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.8800 mm, -5.9700 mm): Track [Net 0] on Top, length 0.1697 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 8.2980 mm): Track [Net 0] on Top, length 0.3580 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.3807 mm, -0.4393 mm): Track [Net 0] on Top, length 0.8801 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.1500 mm, 8.8100 mm): Track [Net 0] on Top, length 2.0223 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.0200 mm, 2.4300 mm): Track [Net 0] on Top, length 0.1556 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.6424 mm, 5.9600 mm): Track [Net 0] on Top, length 0.0724 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, -0.6900 mm): Track [Net 0] on Top, length 0.2507 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.4100 mm, -3.3700 mm): Track [Net 0] on Top, length 0.4667 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.6500 mm, 7.2100 mm): Track [Net 0] on Top, length 0.0600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(11.0800 mm, -5.7700 mm): Track [Net 0] on Top, length 0.0400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.2181 mm, 8.6470 mm): Track [Net 0] on Top, length 0.4251 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0800 mm, -3.7000 mm): Track [Net 0] on Top, length 1.6400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.7100 mm, 7.2100 mm): Track [Net 0] on Top, length 1.6300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.4900 mm, 2.4300 mm): Track [Net 0] on Top, length 0.4700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.6424 mm, 5.8876 mm): Track [Net 0] on Top, length 1.4816 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(14.0030 mm, 0.1830 mm): Track [Net 0] on Top, length 0.2490 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.1351 mm, 8.7300 mm): Track [Net 0] on Top, length 0.1173 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.6500 mm, 7.2100 mm): Track [Net 0] on Top, length 0.7200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.2900 mm, 1.7600 mm): Track [Net 0] on Top, length 1.6971 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, 1.0510 mm): Track [Net 0] on Top, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.4400 mm, -3.7000 mm): Track [Net 0] on Top, length 0.2000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.2181 mm, 8.0419 mm): Track [Net 0] on Top, length 0.3280 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, 2.5412 mm): Track [Net 0] on Top, length 1.4903 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.1800 mm, 7.8200 mm): Track [Net 0] on Top, length 1.2869 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.7930 mm, 8.6470 mm): Track [Net 0] on Top, length 1.8144 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, -0.4393 mm): Track [Net 0] on Top, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.2307 mm, -5.1122 mm): Track [Net 0] on Top, length 0.5071 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.9300 mm, 7.2100 mm): Track [Net 0] on Top, length 0.2687 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.1800 mm, -5.3100 mm): Track [Net 0] on Top, length 1.3400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0600 mm, -0.1400 mm): Track [Net 0] on Top, length 0.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.6900 mm, 3.2900 mm): Track [Net 0] on Bottom, length 0.4667 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.3900 mm, 1.8200 mm): Track [Net 0] on Bottom, length 0.7071 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.6900 mm, -5.9300 mm): Track [Net 0] on Bottom, length 4.7700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(2.6600 mm, 1.5500 mm): Track [Net 0] on Bottom, length 2.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.4100 mm, 1.3200 mm): Track [Net 0] on Bottom, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.6900 mm, 4.8400 mm): Track [Net 0] on Bottom, length 1.5500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.9000 mm, 1.8100 mm): Track [Net 0] on Bottom, length 0.6930 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.3900 mm, 3.3800 mm): Track [Net 0] on Bottom, length 2.4466 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.9000 mm, 3.3700 mm): Track [Net 0] on Bottom, length 1.5600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.6600 mm, 1.5500 mm): Track [Net 0] on Bottom, length 0.3253 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(2.6600 mm, 1.6500 mm): Track [Net 0] on Bottom, length 0.1000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(11.0800 mm, -5.8100 mm): Track [Net 0] on Bottom, length 1.2700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.8400 mm, -5.8500 mm): Track [Net 0] on Bottom, length 0.1131 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.6900 mm, -5.8500 mm): Track [Net 0] on Bottom, length 3.1500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.8100 mm, -5.8100 mm): Track [Net 0] on Bottom, length 0.1697 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.8900 mm, 1.3200 mm): Track [Net 0] on Bottom, length 4.4800 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(4.3900 mm, 3.3800 mm): Track [Net 0] on Bottom, length 1.5600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 10.4700 mm): Track [Net 1] on Top, length 0.4950 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.0000 mm, 10.8200 mm): Track [Net 1] on Top, length 0.9200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(2.0800 mm, 10.8200 mm): Track [Net 1] on Top, length 0.4101 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.7900 mm, 12.4700 mm): Track [Net 1] on Top, length 0.0900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.8000 mm, 12.2700 mm): Track [Net 1] on Top, length 0.2000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.7900 mm, 11.1100 mm): Track [Net 1] on Top, length 1.4500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 10.2980 mm): Track [Net 1] on Top, length 0.1720 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.1700 mm, 4.0900 mm): Track [Net 2] on Top, length 1.6122 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.9200 mm, -3.2200 mm): Track [Net 2] on Top, length 0.4950 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.0500 mm, 0.2100 mm): Track [Net 2] on Top, length 0.0707 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0300 mm, 2.5404 mm): Track [Net 2] on Top, length 1.4903 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.6300 mm, -2.1300 mm): Track [Net 2] on Top, length 0.7600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.7400 mm, 1.6200 mm): Track [Net 2] on Top, length 1.4100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.1400 mm, 0.6300 mm): Track [Net 2] on Top, length 1.6300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0100 mm, 2.6200 mm): Track [Net 2] on Top, length 0.7600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.9400 mm, -0.1400 mm): Track [Net 2] on Top, length 0.5100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(13.1700 mm, 6.1200 mm): Track [Net 2] on Top, length 2.0300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.6200 mm, 3.4500 mm): Track [Net 2] on Top, length 0.5091 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.1400 mm, 2.2600 mm): Track [Net 2] on Top, length 0.1414 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.1400 mm, 0.5500 mm): Track [Net 2] on Top, length 1.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.0200 mm, 1.9900 mm): Track [Net 2] on Top, length 0.2687 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.8696 mm, -1.1800 mm): Track [Net 2] on Top, length 0.7643 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.4900 mm, 4.3600 mm): Track [Net 2] on Top, length 1.2869 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.1600 mm, -3.3600 mm): Track [Net 2] on Top, length 1.3200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.5700 mm, -2.8700 mm): Track [Net 2] on Top, length 0.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.5500 mm, 0.1800 mm): Track [Net 2] on Top, length 0.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.4600 mm, 1.5500 mm): Track [Net 2] on Top, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.0000 mm, 0.1600 mm): Track [Net 2] on Top, length 0.0300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.7900 mm, -1.7900 mm): Track [Net 2] on Top, length 0.4400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.1100 mm, 1.9900 mm): Track [Net 2] on Top, length 0.5233 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0300 mm, 1.0501 mm): Track [Net 2] on Top, length 1.4903 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.2200 mm, -0.6000 mm): Track [Net 2] on Top, length 0.9400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.4600 mm, 1.5500 mm): Track [Net 2] on Top, length 0.6223 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.2200 mm, -0.6000 mm): Track [Net 2] on Top, length 0.1100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.3100 mm, -3.2200 mm): Track [Net 2] on Top, length 0.3900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.2500 mm, 2.6600 mm): Track [Net 2] on Top, length 3.7800 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-7.0200 mm, 1.9900 mm): Track [Net 2] on Top, length 0.0900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.5900 mm, 0.1800 mm): Track [Net 2] on Top, length 0.6364 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.8200 mm, -4.4600 mm): Track [Net 2] on Top, length 0.7212 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.8300 mm, 1.8000 mm): Track [Net 2] on Top, length 1.1597 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.2200 mm, -0.4900 mm): Track [Net 2] on Top, length 0.9475 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0300 mm, -0.5400 mm): Track [Net 2] on Top, length 0.0998 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.5700 mm, -1.9100 mm): Track [Net 2] on Top, length 1.0324 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(11.6200 mm, 6.6000 mm): Track [Net 2] on Top, length 1.0700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.7900 mm, -2.2300 mm): Track [Net 2] on Top, length 1.5981 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.9800 mm, 3.8100 mm): Track [Net 2] on Top, length 2.1500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0300 mm, 2.9500 mm): Track [Net 2] on Top, length 0.4097 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.7400 mm, 0.2100 mm): Track [Net 2] on Top, length 0.3100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.3400 mm, -3.3600 mm): Track [Net 2] on Top, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.9400 mm, 4.3600 mm): Track [Net 2] on Top, length 0.5500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.3000 mm, -1.1800 mm): Track [Net 2] on Top, length 1.5696 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.4000 mm, 3.4500 mm): Track [Net 2] on Top, length 3.2200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.3100 mm, -3.9500 mm): Track [Net 2] on Top, length 0.7300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(11.4100 mm, -1.1600 mm): Track [Net 2] on Top, length 0.8768 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.6300 mm, -2.8900 mm): Track [Net 2] on Top, length 0.6647 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.9800 mm, 5.9600 mm): Track [Net 2] on Top, length 0.9051 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.0300 mm, 2.6600 mm): Track [Net 2] on Top, length 0.1196 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(12.6900 mm, 6.6000 mm): Track [Net 2] on Top, length 0.6788 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.4500 mm, -0.1400 mm): Track [Net 2] on Top, length 0.9758 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.1400 mm, 1.5500 mm): Track [Net 2] on Top, length 1.5698 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.0400 mm, 2.3600 mm): Track [Net 2] on Top, length 1.1800 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(11.4100 mm, -1.7204 mm): Track [Net 2] on Top, length 0.5605 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.8800 mm, -4.4600 mm): Track [Net 2] on Top, length 0.0600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.2200 mm, -1.5400 mm): Track [Net 2] on Top, length 0.8344 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-1.8400 mm, -3.3600 mm): Track [Net 2] on Bottom, length 0.2800 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.9200 mm, 0.1600 mm): Track [Net 2] on Bottom, length 1.0748 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.1600 mm, -0.6000 mm): Track [Net 2] on Bottom, length 1.9400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.4900 mm, -4.8500 mm): Track [Net 2] on Bottom, length 0.5515 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.6300 mm, -4.8500 mm): Track [Net 2] on Bottom, length 10.1200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-1.8400 mm, -3.6400 mm): Track [Net 2] on Bottom, length 1.7112 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-6.9700 mm, 0.1600 mm): Track [Net 2] on Bottom, length 0.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.2900 mm, -2.6800 mm): Track [Net 3] on Top, length 0.8900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.5300 mm, -3.1100 mm): Track [Net 3] on Top, length 0.3300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.9700 mm, -4.6100 mm): Track [Net 3] on Top, length 2.1213 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.8600 mm, -3.1100 mm): Track [Net 3] on Top, length 0.6081 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-1.0200 mm, -4.6100 mm): Track [Net 3] on Top, length 0.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.6900 mm, 0.9000 mm): Track [Net 4] on Top, length 1.4566 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-1.9500 mm, 4.3600 mm): Track [Net 4] on Top, length 0.0990 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.3100 mm, -2.2100 mm): Track [Net 4] on Top, length 0.9617 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.4000 mm, 2.8600 mm): Track [Net 4] on Top, length 1.5400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.6600 mm, 1.9300 mm): Track [Net 4] on Top, length 0.6700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.8300 mm, 0.8300 mm): Track [Net 4] on Top, length 1.0100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.3100 mm, -3.8300 mm): Track [Net 4] on Top, length 1.6200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.5300 mm, -4.6100 mm): Track [Net 4] on Top, length 1.1031 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.9900 mm, -0.2100 mm): Track [Net 4] on Top, length 0.0990 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.8400 mm, 0.8300 mm): Track [Net 4] on Top, length 0.0990 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0600 mm, 0.4000 mm): Track [Net 4] on Top, length 0.7071 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.9900 mm, -1.5300 mm): Track [Net 4] on Top, length 1.3200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-4.5600 mm, 0.9000 mm): Track [Net 4] on Top, length 0.6500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-3.9100 mm, 0.9000 mm): Track [Net 4] on Top, length 0.2200 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.8600 mm, 4.3600 mm): Track [Net 4] on Top, length 1.0900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0600 mm, -0.1400 mm): Track [Net 4] on Top, length 0.5400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.7200 mm, -4.6100 mm): Track [Net 4] on Top, length 0.8100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.6600 mm, 2.6000 mm): Track [Net 4] on Top, length 0.3677 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.8000 mm, 0.8300 mm): Track [Net 4] on Bottom, length 0.0300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.4900 mm, 3.5500 mm): Track [Net 4] on Bottom, length 2.4100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.0200 mm, 4.4300 mm): Track [Net 4] on Bottom, length 0.4100 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.4900 mm, 1.1400 mm): Track [Net 4] on Bottom, length 0.4384 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.0200 mm, 4.0200 mm): Track [Net 4] on Bottom, length 0.6647 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.4530 mm, -2.6880 mm): Track [Net 5] on Top, length 0.0880 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.2900 mm, -2.3400 mm): Track [Net 5] on Top, length 0.5500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.4530 mm, -2.6000 mm): Track [Net 5] on Top, length 1.9030 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.5500 mm, -2.6000 mm): Track [Net 5] on Top, length 0.3677 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.8700 mm, -1.1400 mm): Track [Net 6] on Top, length 0.9300 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.8030 mm, 1.7120 mm): Track [Net 6] on Top, length 1.2346 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.9300 mm, 0.8390 mm): Track [Net 6] on Top, length 0.9190 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.9300 mm, -0.0800 mm): Track [Net 6] on Top, length 1.4991 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.2130 mm, 13.5320 mm): Track [Net 7] on Top, length 0.6950 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.2900 mm, -1.7900 mm): Track [Net 7] on Top, length 0.4600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.2500 mm, -2.5100 mm): Track [Net 7] on Top, length 0.2687 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-0.2600 mm, -2.8000 mm): Track [Net 7] on Top, length 2.3400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(0.2900 mm, -2.2500 mm): Track [Net 7] on Top, length 0.7778 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(9.6900 mm, -2.2200 mm): Track [Net 7] on Top, length 0.3800 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.6000 mm, -2.8000 mm): Track [Net 7] on Top, length 0.1556 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.2500 mm, -1.7700 mm): Track [Net 7] on Top, length 0.7400 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.4400 mm, -2.7000 mm): Track [Net 7] on Top, length 0.2700 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(10.1700 mm, -2.7000 mm): Track [Net 7] on Top, length 0.6788 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(8.9080 mm, 13.5320 mm): Track [Net 7] on Top, length 2.3504 mm
+[invalid_outline]: Board has malformed outline (segment has null or very small length: 666 nm)
+    Local override; error
+    @(-8.5307 mm, -2.8836 mm): Segment on Edge.Cuts
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(9.3250 mm, 10.5024 mm): PTH pad [<no net>] of MH5
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(-4.4760 mm, 10.4624 mm): PTH pad [<no net>] of MH6
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(10.5520 mm, 1.2624 mm): PTH pad [<no net>] of MH1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(-5.2200 mm, 1.5464 mm): PTH pad [<no net>] of MH2
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(-3.7820 mm, -7.1336 mm): PTH pad [<no net>] of MH3
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.1667 mm)
+    Rule: board setup constraints; error
+    @(9.1920 mm, -7.0646 mm): PTH pad [<no net>] of MH4
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.1220 mm)
+    Rule: board setup constraints edge; error
+    @(-8.5300 mm, -2.8836 mm): Segment on Edge.Cuts
+    @(-7.4900 mm, -3.4700 mm): Track [Net 36] on Top, length 0.8336 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(14.3700 mm, 6.3664 mm): Segment on Edge.Cuts
+    @(13.8600 mm, 6.6064 mm): Track [Net 37] on Top, length 1.6263 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.2648 mm)
+    Rule: board setup constraints edge; error
+    @(-8.6300 mm, 8.7164 mm): Segment on Edge.Cuts
+    @(-7.4900 mm, 8.9000 mm): Track [Net 35] on Top, length 0.8364 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-8.5300 mm, -2.8836 mm): Segment on Edge.Cuts
+    @(-9.6700 mm, -2.1236 mm): PTH pad 1 [Net 36] of P5
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(13.9200 mm, 8.7664 mm): Segment on Edge.Cuts
+    @(15.0100 mm, 7.7564 mm): PTH pad 1 [Net 37] of P7
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-8.6300 mm, 8.7164 mm): Segment on Edge.Cuts
+    @(-8.3264 mm, 8.9000 mm): Track [Net 35] on Top, length 1.9001 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.3670 mm)
+    Rule: board setup constraints edge; error
+    @(14.3700 mm, 6.3664 mm): Segment on Edge.Cuts
+    @(13.8600 mm, 5.1500 mm): Track [Net 37] on Top, length 1.4564 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.1538 mm)
+    Rule: board setup constraints edge; error
+    @(-9.5168 mm, 5.4081 mm): Segment on Edge.Cuts
+    @(-9.6700 mm, 7.5564 mm): PTH pad 1 [Net 35] of P6
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(-8.5300 mm, -2.8836 mm): Segment on Edge.Cuts
+    @(-8.3236 mm, -3.4700 mm): Track [Net 36] on Top, length 1.9041 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1736 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0200 mm, 3.7800 mm): Track [Net 0] on Top, length 0.8200 mm
+    @(-5.2600 mm, 4.5200 mm): Track [Net 12] on Top, length 1.6405 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1915 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 7.9400 mm): Track [Net 0] on Top, length 0.1697 mm
+    @(3.7000 mm, 8.2980 mm): Pad 2 [Net 31] of U3 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(3.7000 mm, 8.2980 mm): Pad 2 [Net 31] of U3 on Top
+    @(3.3500 mm, 8.2980 mm): Track [Net 0] on Top, length 0.3580 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1736 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0100 mm, 4.7700 mm): Track [Net 0] on Top, length 1.4001 mm
+    @(-5.2600 mm, 4.5200 mm): Track [Net 12] on Top, length 1.6405 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1575 mm)
+    Rule: netclass 'Default'; error
+    @(0.8800 mm, -7.5200 mm): Pad 2 [Net 17] of C13 on Top
+    @(-0.1300 mm, -7.5300 mm): Track [Net 0] on Top, length 1.4284 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1904 mm)
+    Rule: netclass 'Default'; error
+    @(-5.0200 mm, 2.9600 mm): Via [Net 0] on Top - Bottom
+    @(-6.0100 mm, 3.3800 mm): Pad 2 [Net 2] of C6 on Top
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 20)
+    Local override; error
+    @(6.2400 mm, 13.1200 mm): Track [Net 1] on Top, length 1.1200 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 10.4700 mm): Track [Net 1] on Top, length 0.4950 mm
+    @(3.7000 mm, 10.2980 mm): Track [Net 30] on Top, length 0.4520 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0350 mm)
+    Rule: netclass 'Default'; error
+    @(5.8000 mm, 12.4700 mm): Track [Net 1] on Top, length 4.0100 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 1)
+    Local override; error
+    @(-2.1100 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.1200 mm, 13.4600 mm): Track [Net 1] on Top, length 4.4300 mm
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 20)
+    Local override; error
+    @(5.8000 mm, 12.2700 mm): Track [Net 1] on Top, length 0.4100 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 20)
+    Local override; error
+    @(1.7900 mm, 12.5600 mm): Track [Net 1] on Top, length 0.0400 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 1)
+    Local override; error
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+    @(5.8000 mm, 12.2700 mm): Track [Net 1] on Top, length 0.2000 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1550 mm)
+    Rule: netclass 'Default'; error
+    @(7.3600 mm, 13.1200 mm): Track [Net 1] on Top, length 1.2445 mm
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0350 mm)
+    Rule: netclass 'Default'; error
+    @(1.7900 mm, 12.4700 mm): Track [Net 1] on Top, length 0.0900 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(-0.2600 mm, -2.8000 mm): Track [Net 7] on Top, length 2.3400 mm
+    @(-1.8400 mm, -3.3600 mm): Via [Net 2] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(3.3500 mm, 10.2980 mm): Track [Net 1] on Top, length 0.1720 mm
+    @(3.7000 mm, 9.5200 mm): Track [Net 30] on Top, length 0.7780 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1785 mm)
+    Rule: netclass 'Default'; error
+    @(1.2900 mm, 5.6500 mm): Track [Net 9] on Top, length 0.4243 mm
+    @(0.9800 mm, 5.8300 mm): Track [Net 8] on Top, length 1.0200 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1785 mm)
+    Rule: netclass 'Default'; error
+    @(1.2900 mm, 5.0100 mm): Track [Net 9] on Top, length 0.6400 mm
+    @(0.9800 mm, 5.8300 mm): Track [Net 8] on Top, length 1.0200 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.9600 mm, 7.0800 mm): Track [Net 9] on Top, length 3.7400 mm
+    @(6.3700 mm, 5.7800 mm): Track [Net 22] on Top, length 1.3294 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1900 mm)
+    Rule: netclass 'Default'; error
+    @(7.2300 mm, 5.5500 mm): Track [Net 9] on Top, length 0.4900 mm
+    @(7.8600 mm, 5.4300 mm): Pad 1 [Net 0] of C18 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1900 mm)
+    Rule: netclass 'Default'; error
+    @(5.7000 mm, 7.0800 mm): Track [Net 9] on Top, length 2.1637 mm
+    @(7.8600 mm, 5.4300 mm): Pad 1 [Net 0] of C18 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1806 mm)
+    Rule: netclass 'Default'; error
+    @(7.5800 mm, 1.4800 mm): Track [Net 10] on Top, length 1.1738 mm
+    @(7.1400 mm, 1.5500 mm): Track [Net 2] on Top, length 1.5698 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-5.2600 mm, 6.6800 mm): Track [Net 12] on Top, length 2.1600 mm
+    @(-4.6900 mm, 4.8400 mm): Via [Net 0] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1806 mm)
+    Rule: netclass 'Default'; error
+    @(8.4100 mm, 2.3100 mm): Track [Net 10] on Top, length 0.7300 mm
+    @(7.1400 mm, 1.5500 mm): Track [Net 2] on Top, length 1.5698 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1877 mm)
+    Rule: netclass 'Default'; error
+    @(-1.7900 mm, 2.9500 mm): Track [Net 13] on Bottom, length 4.7200 mm
+    @(-2.1500 mm, -1.9300 mm): Track [Net 14] on Bottom, length 2.1637 mm
+[shorting_items]: Items shorting two nets (nets Net 37 and Net 20)
+    Local override; error
+    @(11.9000 mm, 4.9100 mm): Pad 1 [Net 37] of R6 on Bottom
+    @(12.8200 mm, 4.2800 mm): Track [Net 20] on Bottom, length 2.0930 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1575 mm)
+    Rule: netclass 'Default'; error
+    @(5.9900 mm, -6.6500 mm): Pad 1 [Net 19] of C24 on Top
+    @(4.8700 mm, -6.5300 mm): Track [Net 18] on Top, length 1.5839 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(8.5900 mm, -4.0600 mm): Track [Net 24] on Top, length 1.1100 mm
+    @(8.3000 mm, -3.2900 mm): Track [Net 23] on Top, length 0.9475 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(6.9500 mm, -3.6700 mm): Track [Net 24] on Top, length 1.2500 mm
+    @(8.3000 mm, -3.2900 mm): Track [Net 23] on Top, length 0.9475 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(4.0500 mm, 10.2980 mm): Pad 6 [<no net>] of U3 on Top
+    @(3.7000 mm, 10.2980 mm): Track [Net 30] on Top, length 0.4520 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(4.0500 mm, 10.2980 mm): Pad 6 [<no net>] of U3 on Top
+    @(3.7000 mm, 9.5200 mm): Track [Net 30] on Top, length 0.7780 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1597 mm)
+    Rule: netclass 'Default'; error
+    @(13.5800 mm, 1.8000 mm): Track [Net 37] on Top, length 0.9300 mm
+    @(13.0300 mm, 2.5412 mm): Pad 1 [Net 0] of C5 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1643 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, 2.5412 mm): Pad 1 [Net 0] of C5 on Top
+    @(13.5800 mm, 1.8000 mm): Via [Net 37] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1601 mm)
+    Rule: netclass 'Default'; error
+    @(13.5800 mm, 2.7300 mm): Track [Net 37] on Top, length 0.9192 mm
+    @(13.0300 mm, 2.5412 mm): Pad 1 [Net 0] of C5 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1575 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0375 mm, 8.3366 mm): Pad 2 [Net 34] of R4 on Top
+    @(-5.3304 mm, 9.0438 mm): Track [Net 35] on Top, length 2.0159 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1898 mm)
+    Rule: netclass 'Default'; error
+    @(-3.4600 mm, 1.0200 mm): Track [Net 34] on Bottom, length 0.7495 mm
+    @(-2.8300 mm, 0.8300 mm): Via [Net 4] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1692 mm)
+    Rule: netclass 'Default'; error
+    @(-3.1200 mm, -1.2100 mm): Via [Net 34] on Top - Bottom
+    @(-2.9100 mm, -1.9500 mm): Via [Net 33] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1692 mm)
+    Rule: netclass 'Default'; error
+    @(-3.1200 mm, -1.2100 mm): Via [Net 34] on Top - Bottom
+    @(-2.9100 mm, -1.9500 mm): Via [Net 33] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(4.0500 mm, 8.2980 mm): Pad 3 [<no net>] of U3 on Top
+    @(3.7000 mm, 8.7100 mm): Track [Net 31] on Top, length 0.4120 mm
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 31)
+    Local override; error
+    @(0.5900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(0.7900 mm, 12.5600 mm): Track [Net 31] on Top, length 3.7500 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1928 mm)
+    Rule: netclass 'Default'; error
+    @(4.2900 mm, 5.4300 mm): Track [Net 30] on Top, length 0.8768 mm
+    @(4.7900 mm, 5.0100 mm): Pad 11 [<no net>] of  on Top
+[shorting_items]: Items shorting two nets (nets Net 30 and Net 20)
+    Local override; error
+    @(5.4700 mm, 10.9400 mm): Track [Net 30] on Top, length 1.8809 mm
+    @(5.5400 mm, 11.4770 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1900 mm)
+    Rule: netclass 'Default'; error
+    @(-4.0200 mm, -1.1800 mm): Track [Net 26] on Bottom, length 2.6700 mm
+    @(-4.2200 mm, -0.6000 mm): Via [Net 2] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1898 mm)
+    Rule: netclass 'Default'; error
+    @(-3.3400 mm, -0.4300 mm): Via [Net 26] on Top - Bottom
+    @(-4.2200 mm, -0.4900 mm): Track [Net 2] on Top, length 0.9475 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1575 mm)
+    Rule: netclass 'Default'; error
+    @(-4.9934 mm, 8.3366 mm): Track [Net 34] on Top, length 1.0441 mm
+    @(-5.3304 mm, 9.0438 mm): Pad 1 [Net 35] of R4 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(6.6000 mm, -3.3200 mm): Track [Net 24] on Top, length 0.4950 mm
+    @(5.4100 mm, -2.9600 mm): Track [Net 23] on Top, length 1.4000 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(8.3000 mm, -3.2900 mm): Track [Net 23] on Top, length 0.9475 mm
+    @(8.2000 mm, -3.6700 mm): Track [Net 24] on Top, length 0.5515 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(5.4100 mm, -2.9600 mm): Track [Net 23] on Top, length 1.4000 mm
+    @(5.5500 mm, -2.6000 mm): Track [Net 5] on Top, length 0.3677 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1620 mm)
+    Rule: netclass 'Default'; error
+    @(7.1400 mm, -3.2900 mm): Track [Net 23] on Top, length 1.1600 mm
+    @(7.4530 mm, -2.6880 mm): Pad 1 [Net 5] of WMCU_TCK on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1736 mm)
+    Rule: netclass 'Default'; error
+    @(4.7900 mm, -2.3400 mm): Track [Net 23] on Top, length 0.8768 mm
+    @(5.2900 mm, -2.3400 mm): Track [Net 5] on Top, length 0.5500 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1900 mm)
+    Rule: netclass 'Default'; error
+    @(7.8800 mm, -4.2700 mm): Via [Net 20] on Top - Bottom
+    @(-0.6300 mm, -4.8500 mm): Track [Net 2] on Bottom, length 10.1200 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.1500 mm, 3.2400 mm): Track [Net 14] on Bottom, length 5.1700 mm
+    @(-1.7900 mm, -1.7700 mm): Track [Net 13] on Bottom, length 1.6829 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1877 mm)
+    Rule: netclass 'Default'; error
+    @(-0.6000 mm, -2.9600 mm): Track [Net 13] on Bottom, length 3.7700 mm
+    @(-2.1500 mm, -1.9300 mm): Track [Net 14] on Bottom, length 2.1637 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1877 mm)
+    Rule: netclass 'Default'; error
+    @(-1.7900 mm, -1.7700 mm): Track [Net 13] on Bottom, length 1.6829 mm
+    @(-2.1500 mm, -1.9300 mm): Track [Net 14] on Bottom, length 2.1637 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1806 mm)
+    Rule: netclass 'Default'; error
+    @(7.5800 mm, 0.3200 mm): Track [Net 10] on Top, length 1.1600 mm
+    @(7.1400 mm, 1.5500 mm): Track [Net 2] on Top, length 1.5698 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1930 mm)
+    Rule: netclass 'Default'; error
+    @(2.2230 mm, 6.3720 mm): Pad 1 [Net 21] of WMCU_RXD on Top
+    @(1.5900 mm, 5.9500 mm): Track [Net 9] on Top, length 0.7600 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(6.9100 mm, -0.3500 mm): Track [Net 10] on Top, length 0.9475 mm
+    @(7.9300 mm, 0.8390 mm): Track [Net 6] on Top, length 0.9190 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1575 mm)
+    Rule: netclass 'Default'; error
+    @(7.8600 mm, 5.4300 mm): Pad 1 [Net 0] of C18 on Top
+    @(7.2300 mm, 5.0600 mm): Track [Net 9] on Top, length 0.8910 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(9.1400 mm, 2.3100 mm): Track [Net 10] on Top, length 0.5515 mm
+    @(8.2500 mm, 2.6600 mm): Track [Net 2] on Top, length 3.7800 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(1.5700 mm, 7.4400 mm): Track [Net 8] on Top, length 4.4400 mm
+    @(1.5900 mm, 6.7100 mm): Track [Net 9] on Top, length 0.5233 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1793 mm)
+    Rule: netclass 'Default'; error
+    @(-6.0100 mm, 5.0200 mm): Pad 1 [Net 0] of C6 on Top
+    @(-5.2600 mm, 4.5200 mm): Track [Net 12] on Top, length 1.6405 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1900 mm)
+    Rule: netclass 'Default'; error
+    @(-0.9300 mm, -5.2200 mm): Track [Net 7] on Bottom, length 10.9900 mm
+    @(-1.8400 mm, -3.6400 mm): Track [Net 2] on Bottom, length 1.7112 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(0.2900 mm, -1.7900 mm): Track [Net 7] on Top, length 0.4600 mm
+    @(0.7900 mm, -2.2300 mm): Track [Net 2] on Top, length 1.5981 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(7.4530 mm, -2.6000 mm): Track [Net 5] on Top, length 1.9030 mm
+    @(6.8100 mm, -2.9600 mm): Track [Net 23] on Top, length 0.4667 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1666 mm)
+    Rule: netclass 'Default'; error
+    @(-2.7100 mm, -2.6900 mm): Via [Net 7] on Top - Bottom
+    @(-2.9100 mm, -1.9500 mm): Via [Net 33] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(8.8030 mm, 1.7120 mm): Track [Net 6] on Top, length 1.2346 mm
+    @(7.5800 mm, 0.3200 mm): Track [Net 10] on Top, length 1.1600 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(-2.4900 mm, 3.5500 mm): Track [Net 4] on Bottom, length 2.4100 mm
+    @(-2.1500 mm, 3.2400 mm): Track [Net 14] on Bottom, length 5.1700 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1666 mm)
+    Rule: netclass 'Default'; error
+    @(-2.7100 mm, -2.6900 mm): Via [Net 7] on Top - Bottom
+    @(-2.9100 mm, -1.9500 mm): Via [Net 33] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1615 mm)
+    Rule: netclass 'Default'; error
+    @(-4.2200 mm, -0.6000 mm): Via [Net 2] on Top - Bottom
+    @(-3.3400 mm, -0.5000 mm): Track [Net 26] on Bottom, length 0.9617 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1601 mm)
+    Rule: netclass 'Default'; error
+    @(9.3100 mm, -3.9500 mm): Track [Net 2] on Top, length 0.7300 mm
+    @(8.9700 mm, -3.9600 mm): Track [Net 23] on Top, length 1.1250 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1800 mm)
+    Rule: netclass 'Default'; error
+    @(-2.0200 mm, 4.4300 mm): Via [Net 4] on Top - Bottom
+    @(-3.1300 mm, 3.8600 mm): Track [Net 11] on Top, length 2.2700 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(0.7900 mm, -2.2300 mm): Track [Net 2] on Top, length 1.5981 mm
+    @(-0.2600 mm, -2.8000 mm): Track [Net 7] on Top, length 2.3400 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1715 mm)
+    Rule: netclass 'Default'; error
+    @(6.6430 mm, 4.9520 mm): Pad 1 [Net 22] of WMCU_TXD on Top
+    @(5.9400 mm, 4.3600 mm): Track [Net 2] on Top, length 0.5500 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1601 mm)
+    Rule: netclass 'Default'; error
+    @(9.8200 mm, -4.4600 mm): Track [Net 2] on Top, length 0.7212 mm
+    @(8.9700 mm, -3.9600 mm): Track [Net 23] on Top, length 1.1250 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1928 mm)
+    Rule: netclass 'Default'; error
+    @(8.5700 mm, -1.9100 mm): Track [Net 2] on Top, length 1.0324 mm
+    @(9.3100 mm, -2.2200 mm): Pad 1 [Net 7] of R1 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(8.2500 mm, 2.6600 mm): Track [Net 2] on Top, length 3.7800 mm
+    @(8.4100 mm, 2.3100 mm): Track [Net 10] on Top, length 0.7300 mm
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 26)
+    Local override; error
+    @(-3.3100 mm, 13.4600 mm): Track [Net 1] on Top, length 3.4365 mm
+    @(-4.0800 mm, 12.3500 mm): Pad 1 [Net 26] of Pad5 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1715 mm)
+    Rule: netclass 'Default'; error
+    @(6.6430 mm, 4.9520 mm): Pad 1 [Net 22] of WMCU_TXD on Top
+    @(6.4900 mm, 4.3600 mm): Track [Net 2] on Top, length 1.2869 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0350 mm)
+    Rule: netclass 'Default'; error
+    @(1.7900 mm, 11.1100 mm): Track [Net 1] on Top, length 1.4500 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 1)
+    Local override; error
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.8300 mm, 12.7500 mm): Track [Net 1] on Top, length 1.0041 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(13.0300 mm, 2.5412 mm): Track [Net 0] on Top, length 1.4903 mm
+    @(13.5800 mm, 1.8000 mm): Via [Net 37] on Top - Bottom
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0250 mm)
+    Rule: netclass 'Default'; error
+    @(1.8300 mm, 12.5600 mm): Track [Net 1] on Top, length 0.1900 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[shorting_items]: Items shorting two nets (nets Net 0 and Net 1)
+    Local override; error
+    @(8.1900 mm, 12.2400 mm): Pad 1 [Net 0] of RESET on Top
+    @(8.2400 mm, 12.2400 mm): Track [Net 1] on Top, length 2.6800 mm
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 20)
+    Local override; error
+    @(5.8000 mm, 12.6800 mm): Track [Net 1] on Top, length 0.6223 mm
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1383 mm)
+    Rule: netclass 'Default'; error
+    @(2.0800 mm, 10.8200 mm): Track [Net 1] on Top, length 0.4101 mm
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(3.7000 mm, 8.2980 mm): Pad 2 [Net 31] of U3 on Top
+    @(3.3500 mm, 8.2980 mm): Pad 1 [Net 0] of U3 on Top
+[shorting_items]: Items shorting two nets (nets Net 1 and Net 20)
+    Local override; error
+    @(5.8000 mm, 12.2700 mm): Pad 1 [Net 1] of R3 on Top
+    @(5.9900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(4.0500 mm, 8.2980 mm): Pad 3 [<no net>] of U3 on Top
+    @(3.7000 mm, 8.2980 mm): Pad 2 [Net 31] of U3 on Top
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 31)
+    Local override; error
+    @(0.5900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(0.7900 mm, 12.5600 mm): Pad 2 [Net 31] of R2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(3.7000 mm, 10.2980 mm): Pad 5 [Net 30] of U3 on Top
+    @(3.3500 mm, 10.2980 mm): Pad 4 [Net 1] of U3 on Top
+[shorting_items]: Items shorting two nets (nets Net 30 and Net 20)
+    Local override; error
+    @(6.8000 mm, 12.2700 mm): Pad 2 [Net 30] of R3 on Top
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1700 mm)
+    Rule: netclass 'Default'; error
+    @(4.0500 mm, 10.2980 mm): Pad 6 [<no net>] of U3 on Top
+    @(3.7000 mm, 10.2980 mm): Pad 5 [Net 30] of U3 on Top
+[shorting_items]: Items shorting two nets (nets Net 20 and Net 1)
+    Local override; error
+    @(1.4900 mm, 12.7410 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.7900 mm, 12.5600 mm): Pad 1 [Net 1] of R2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1250 mm)
+    Rule: netclass 'Default'; error
+    @(2.3900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+    @(1.7900 mm, 12.5600 mm): Pad 1 [Net 1] of R2 on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1838 mm)
+    Rule: netclass 'Default'; error
+    @(5.2900 mm, 5.0100 mm): Pad 12 [<no net>] of  on Top
+    @(5.9400 mm, 4.3600 mm): Pad 13 [Net 2] of  on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1838 mm)
+    Rule: netclass 'Default'; error
+    @(5.2900 mm, -1.7900 mm): Pad 25 [Net 5] of  on Top
+    @(5.9400 mm, -1.1400 mm): Pad 24 [Net 6] of  on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1838 mm)
+    Rule: netclass 'Default'; error
+    @(-0.8600 mm, -1.1400 mm): Pad 37 [<no net>] of  on Top
+    @(-0.2100 mm, -1.7900 mm): Pad 36 [<no net>] of  on Top
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1838 mm)
+    Rule: netclass 'Default'; error
+    @(-0.8600 mm, 4.3600 mm): Pad 48 [Net 4] of  on Top
+    @(-0.2100 mm, 5.0100 mm): Pad 1 [Net 14] of  on Top
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(0.4100 mm, 1.3200 mm): Reference field of Pad3
+    @(0.4100 mm, 1.3200 mm): Pad 1 [Net 0] of Pad3 on Bottom
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.8900 mm, 1.3200 mm): Reference field of Pad4
+    @(4.8900 mm, 1.3200 mm): Pad 1 [Net 0] of Pad4 on Bottom
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(-6.2100 mm, 8.2700 mm): Reference field of Pad1
+    @(-9.6700 mm, 7.5564 mm): PTH pad 1 [Net 35] of P6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(-6.2100 mm, 8.2700 mm): Reference field of Pad1
+    @(-6.2100 mm, 8.2700 mm): Pad 1 [Net 1] of Pad1 on Bottom
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(11.5500 mm, 8.2700 mm): Reference field of Pad2
+    @(15.0100 mm, 7.7564 mm): PTH pad 1 [Net 37] of P7
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(11.5500 mm, 8.2700 mm): Reference field of Pad2
+    @(11.5500 mm, 8.2700 mm): Pad 1 [Net 1] of Pad2 on Bottom
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(15.0100 mm, 7.7564 mm): Reference field of P7
+    @(15.0100 mm, 7.7564 mm): PTH pad 1 [Net 37] of P7
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(14.3700 mm, 6.3664 mm): Segment on Edge.Cuts
+    @(15.0100 mm, 7.7564 mm): Reference field of P7
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(6.7400 mm, 7.0200 mm): Via [Net 0] on Top - Bottom
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(6.1800 mm, -3.9700 mm): Via [Net 0] on Top - Bottom
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(7.5800 mm, 10.2400 mm): Via [Net 0] on Top - Bottom
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(6.1500 mm, 8.5800 mm): Via [Net 0] on Top - Bottom
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(-1.5100 mm, 9.9300 mm): Via [Net 0] on Top - Bottom
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(10.9900 mm, -0.0500 mm): Via [Net 0] on Top - Bottom
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(8.1900 mm, 13.2400 mm): Track [Net 7] on Bottom, length 0.2700 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(6.8900 mm, 9.5200 mm): Track [Net 20] on Bottom, length 3.2220 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(8.9700 mm, -5.0850 mm): Track [Net 23] on Top, length 2.1538 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(-3.4400 mm, 11.7100 mm): Track [Net 26] on Bottom, length 0.9051 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(11.9000 mm, 3.7500 mm): Track [Net 32] on Top, length 0.1600 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(11.9000 mm, 4.9100 mm): Track [Net 37] on Top, length 0.7100 mm
+
+** Found 11 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(3.3500 mm, 8.2980 mm): Track [Net 0] on Top, length 0.3580 mm
+    @(6.1500 mm, 8.5800 mm): Track [Net 0] on Top, length 0.2300 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(4.3900 mm, 3.3800 mm): Track [Net 0] on Bottom, length 2.4466 mm
+    @(7.7100 mm, 5.5800 mm): Track [Net 0] on Top, length 0.2121 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(6.1500 mm, 8.5800 mm): Track [Net 0] on Top, length 0.2300 mm
+    @(7.6500 mm, 7.2100 mm): Track [Net 0] on Top, length 0.7200 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(6.1800 mm, -5.3100 mm): Track [Net 0] on Top, length 1.3400 mm
+    @(4.3900 mm, 1.8200 mm): Track [Net 0] on Bottom, length 0.7071 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(8.1900 mm, 12.2400 mm): Pad 1 [Net 0] of RESET on Top
+    @(6.1500 mm, 8.8100 mm): Track [Net 0] on Top, length 2.0223 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(12.4100 mm, -1.7196 mm): Track [Net 0] on Top, length 0.4096 mm
+    @(10.5900 mm, -0.4500 mm): Track [Net 0] on Top, length 0.5657 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(6.8900 mm, 12.7420 mm): Pad 1 [Net 20] of U2 on Top
+    @(6.8900 mm, 9.5200 mm): Track [Net 20] on Bottom, length 3.2220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(11.9000 mm, 4.9100 mm): Track [Net 37] on Top, length 0.7100 mm
+    @(11.9000 mm, 4.9100 mm): Pad 1 [Net 37] of R6 on Bottom
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-4.0800 mm, 12.3500 mm): Pad 1 [Net 26] of Pad5 on Top
+    @(-3.4400 mm, 11.7100 mm): Track [Net 26] on Bottom, length 0.9051 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(11.9000 mm, 3.9100 mm): Pad 2 [Net 32] of R6 on Bottom
+    @(11.9000 mm, 3.7500 mm): Track [Net 32] on Top, length 0.1600 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(10.4930 mm, -6.6080 mm): Pad 1 [Net 23] of TDO on Bottom
+    @(8.9700 mm, -5.0850 mm): Track [Net 23] on Top, length 2.1538 mm
+
+** Found 243 Footprint errors **
+[missing_footprint]: Missing footprint A1 (~)
+    Local override; warning
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(12.5300 mm, -0.4397 mm): Footprint C3
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(12.5300 mm, -0.4397 mm): Footprint C3
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(13.0300 mm, -0.4393 mm): Pad 1 [Net 0] of C3 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(12.0300 mm, -0.4402 mm): Pad 2 [Net 2] of C3 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(12.5300 mm, 1.0505 mm): Footprint C4
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(12.5300 mm, 1.0505 mm): Footprint C4
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(13.0300 mm, 1.0510 mm): Pad 1 [Net 0] of C4 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(12.0300 mm, 1.0501 mm): Pad 2 [Net 2] of C4 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(12.5300 mm, 2.5408 mm): Footprint C5
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(12.5300 mm, 2.5408 mm): Footprint C5
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(13.0300 mm, 2.5412 mm): Pad 1 [Net 0] of C5 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(12.0300 mm, 2.5404 mm): Pad 2 [Net 2] of C5 on Top
+[footprint_symbol_mismatch]: CAP_0603 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-6.0100 mm, 4.2000 mm): Footprint C6
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-6.0100 mm, 4.2000 mm): Footprint C6
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(-6.0100 mm, 5.0200 mm): Pad 1 [Net 0] of C6 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(-6.0100 mm, 3.3800 mm): Pad 2 [Net 2] of C6 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(11.9100 mm, -1.7200 mm): Footprint C7
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(11.9100 mm, -1.7200 mm): Footprint C7
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(12.4100 mm, -1.7196 mm): Pad 1 [Net 0] of C7 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(11.4100 mm, -1.7204 mm): Pad 2 [Net 2] of C7 on Top
+[footprint_symbol_mismatch]: CAP_0603 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-3.9100 mm, 1.7200 mm): Footprint C8
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-3.9100 mm, 1.7200 mm): Footprint C8
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(-3.9100 mm, 2.5400 mm): Pad 1 [Net 0] of C8 on Top
+[net_conflict]: Pad net (Net 4) doesn't match net given by schematic (Net-(C16-Pad2))
+    Local override; warning
+    @(-3.9100 mm, 0.9000 mm): Pad 2 [Net 4] of C8 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-5.5600 mm, -0.1400 mm): Footprint C9
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-5.5600 mm, -0.1400 mm): Footprint C9
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(-6.0600 mm, -0.1400 mm): Pad 1 [Net 0] of C9 on Top
+[net_conflict]: Pad net (Net 4) doesn't match net given by schematic (Net-(C16-Pad2))
+    Local override; warning
+    @(-5.0600 mm, -0.1400 mm): Pad 2 [Net 4] of C9 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(2.2904 mm, -4.6122 mm): Footprint C11
+[net_conflict]: Pad net (Net 16) doesn't match net given by schematic (Net-(C11-Pad1))
+    Local override; warning
+    @(2.2904 mm, -5.1122 mm): Pad 1 [Net 16] of C11 on Top
+[net_conflict]: Pad net (Net 14) doesn't match net given by schematic (Net-(U1-RF_P))
+    Local override; warning
+    @(2.2904 mm, -4.1122 mm): Pad 2 [Net 14] of C11 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(0.8800 mm, -7.0200 mm): Footprint C13
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(0.8800 mm, -6.5200 mm): Pad 1 [Net 0] of C13 on Top
+[net_conflict]: Pad net (Net 17) doesn't match net given by schematic (Net-(C13-Pad2))
+    Local override; warning
+    @(0.8800 mm, -7.5200 mm): Pad 2 [Net 17] of C13 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-5.4900 mm, -1.5300 mm): Footprint C16
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-5.4900 mm, -1.5300 mm): Footprint C16
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(-5.9900 mm, -1.5300 mm): Pad 1 [Net 0] of C16 on Top
+[net_conflict]: Pad net (Net 4) doesn't match net given by schematic (Net-(C16-Pad2))
+    Local override; warning
+    @(-4.9900 mm, -1.5300 mm): Pad 2 [Net 4] of C16 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(7.6500 mm, 7.7100 mm): Footprint C17
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(7.6500 mm, 7.2100 mm): Pad 1 [Net 0] of C17 on Top
+[net_conflict]: Pad net (Net 8) doesn't match net given by schematic (Net-(U1-X32K_Q1))
+    Local override; warning
+    @(7.6500 mm, 8.2100 mm): Pad 2 [Net 8] of C17 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(7.8600 mm, 4.9300 mm): Footprint C18
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(7.8600 mm, 5.4300 mm): Pad 1 [Net 0] of C18 on Top
+[net_conflict]: Pad net (Net 9) doesn't match net given by schematic (Net-(U1-X32K_Q2))
+    Local override; warning
+    @(7.8600 mm, 4.4300 mm): Pad 2 [Net 9] of C18 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(9.5600 mm, -0.4500 mm): Footprint C19
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(10.0600 mm, -0.4500 mm): Pad 1 [Net 0] of C19 on Top
+[net_conflict]: Pad net (Net 10) doesn't match net given by schematic (Net-(U1-DCOUPL))
+    Local override; warning
+    @(9.0600 mm, -0.4500 mm): Pad 2 [Net 10] of C19 on Top
+[footprint_symbol_mismatch]: CAP_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(10.4400 mm, -3.2000 mm): Footprint C20
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(10.4400 mm, -3.2000 mm): Footprint C20
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(10.4400 mm, -3.7000 mm): Pad 1 [Net 0] of C20 on Top
+[net_conflict]: Pad net (Net 7) doesn't match net given by schematic (Net-(U1-RESET_N))
+    Local override; warning
+    @(10.4400 mm, -2.7000 mm): Pad 2 [Net 7] of C20 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(5.2307 mm, -4.6122 mm): Footprint C21
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(5.2307 mm, -5.1122 mm): Pad 1 [Net 0] of C21 on Top
+[net_conflict]: Pad net (Net 13) doesn't match net given by schematic (Net-(U1-RF_N))
+    Local override; warning
+    @(5.2307 mm, -4.1122 mm): Pad 2 [Net 13] of C21 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(5.9900 mm, -7.1500 mm): Footprint C24
+[net_conflict]: Pad net (Net 19) doesn't match net given by schematic (Net-(C24-Pad1))
+    Local override; warning
+    @(5.9900 mm, -6.6500 mm): Pad 1 [Net 19] of C24 on Top
+[net_conflict]: Pad net (Net 18) doesn't match net given by schematic (Net-(C24-Pad2))
+    Local override; warning
+    @(5.9900 mm, -7.6500 mm): Pad 2 [Net 18] of C24 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-0.7300 mm, -7.0300 mm): Footprint C31
+[net_conflict]: Pad net (Net 15) doesn't match net given by schematic (Net-(C31-Pad1))
+    Local override; warning
+    @(-0.7300 mm, -6.5300 mm): Pad 1 [Net 15] of C31 on Top
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(-0.7300 mm, -7.5300 mm): Pad 2 [Net 0] of C31 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(7.0400 mm, -4.9300 mm): Footprint C51
+[net_conflict]: Pad net (Net 20) doesn't match net given by schematic (unconnected-(C51-Pad1))
+    Local override; warning
+    @(7.0400 mm, -4.4300 mm): Pad 1 [Net 20] of C51 on Top
+[net_conflict]: Pad net (Net 19) doesn't match net given by schematic (Net-(C24-Pad1))
+    Local override; warning
+    @(7.0400 mm, -5.4300 mm): Pad 2 [Net 19] of C51 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(-7.4600 mm, 2.4000 mm): Footprint FL1
+[footprint_symbol_mismatch]: CAP_0603 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-7.4600 mm, 2.4000 mm): Footprint FL1
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-7.4600 mm, 2.4000 mm): Footprint FL1
+[net_conflict]: Pad net (Net 1) doesn't match net given by schematic (unconnected-(FL1-Pad1))
+    Local override; warning
+    @(-7.4600 mm, 3.2500 mm): Pad 1 [Net 1] of FL1 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (Net-(C3-Pad2))
+    Local override; warning
+    @(-7.4600 mm, 1.5500 mm): Pad 2 [Net 2] of FL1 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(14.0030 mm, 0.4320 mm): Footprint GND
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(14.0030 mm, 0.4320 mm): Footprint GND
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(14.0030 mm, 0.4320 mm): Pad 1 [Net 0] of GND on Top
+[footprint_symbol_mismatch]: IND_0805 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(-1.8700 mm, -4.6100 mm): Footprint L1
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-1.8700 mm, -4.6100 mm): Footprint L1
+[net_conflict]: Pad net (Net 3) doesn't match net given by schematic (unconnected-(L1-Pad1))
+    Local override; warning
+    @(-1.0200 mm, -4.6100 mm): Pad 1 [Net 3] of L1 on Top
+[net_conflict]: Pad net (Net 4) doesn't match net given by schematic (Net-(C16-Pad2))
+    Local override; warning
+    @(-2.7200 mm, -4.6100 mm): Pad 2 [Net 4] of L1 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(0.8200 mm, -4.6400 mm): Footprint L11
+[net_conflict]: Pad net (Net 14) doesn't match net given by schematic (Net-(U1-RF_P))
+    Local override; warning
+    @(0.8200 mm, -4.1600 mm): Pad 1 [Net 14] of L11 on Top
+[net_conflict]: Pad net (Net 15) doesn't match net given by schematic (Net-(C31-Pad1))
+    Local override; warning
+    @(0.8200 mm, -5.1200 mm): Pad 2 [Net 15] of L11 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(2.5000 mm, -7.0400 mm): Footprint L12
+[net_conflict]: Pad net (Net 17) doesn't match net given by schematic (Net-(C13-Pad2))
+    Local override; warning
+    @(2.5000 mm, -7.5200 mm): Pad 1 [Net 17] of L12 on Top
+[net_conflict]: Pad net (Net 16) doesn't match net given by schematic (Net-(C11-Pad1))
+    Local override; warning
+    @(2.5000 mm, -6.5600 mm): Pad 2 [Net 16] of L12 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(3.9800 mm, -7.0100 mm): Footprint L13
+[net_conflict]: Pad net (Net 18) doesn't match net given by schematic (Net-(C24-Pad2))
+    Local override; warning
+    @(3.9800 mm, -6.5300 mm): Pad 1 [Net 18] of L13 on Top
+[net_conflict]: Pad net (Net 17) doesn't match net given by schematic (Net-(C13-Pad2))
+    Local override; warning
+    @(3.9800 mm, -7.4900 mm): Pad 2 [Net 17] of L13 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(3.7603 mm, -4.6400 mm): Footprint L21
+[net_conflict]: Pad net (Net 16) doesn't match net given by schematic (Net-(C11-Pad1))
+    Local override; warning
+    @(3.7603 mm, -5.1200 mm): Pad 1 [Net 16] of L21 on Top
+[net_conflict]: Pad net (Net 13) doesn't match net given by schematic (Net-(U1-RF_N))
+    Local override; warning
+    @(3.7603 mm, -4.1600 mm): Pad 2 [Net 13] of L21 on Top
+[missing_footprint]: Missing footprint NetPort1 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort2 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort3 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort4 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort5 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort6 (WMCU_VDD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort7 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort8 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort9 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort10 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort11 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort12 (DCDC_SW)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort13 (VDDR)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort14 (VDDR)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort15 (VDDR)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort16 (WMCU_TCK)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort17 (WMCU_TMS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort18 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort19 (VDDS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort20 (WMCU_RESET)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort21 (DCDC_SW)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort22 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort23 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort24 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort25 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort26 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort27 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort28 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort29 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort30 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort31 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort34 (WMCU_RXD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort35 (WMCU_TCK)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort36 (WMCU_RXD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort37 (WMCU_TXD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort38 (WMCU_TXD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort39 (WMCU_RESET)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort40 (WMCU_TMS)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort41 (TDI)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort42 (TDO)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort43 (TDO)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort44 (TDI)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort45 (SWO)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort46 (SWO)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort47 (WMCU_VDD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort48 (WMCU_RESET)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort49 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort50 (GND)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort51 (WMCU_VDD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort63 (SDA)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort64 (SDA)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort65 (WMCU_VDD)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort67 (SW1)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort68 (SW2)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort69 (SW3)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort70 (SW1)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort71 (SW2)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort72 (SW3)
+    Local override; warning
+[missing_footprint]: Missing footprint NetPort73 (GND)
+    Local override; warning
+[footprint_symbol_mismatch]: RES_0402 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(9.3100 mm, -2.7200 mm): Footprint R1
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(9.3100 mm, -2.7200 mm): Footprint R1
+[net_conflict]: Pad net (Net 7) doesn't match net given by schematic (Net-(U1-RESET_N))
+    Local override; warning
+    @(9.3100 mm, -2.2200 mm): Pad 1 [Net 7] of R1 on Top
+[net_conflict]: Pad net (Net 2) doesn't match net given by schematic (unconnected-(R1-Pad2))
+    Local override; warning
+    @(9.3100 mm, -3.2200 mm): Pad 2 [Net 2] of R1 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(1.2900 mm, 12.5600 mm): Footprint R2
+[net_conflict]: Pad net (Net 1) doesn't match net given by schematic (Net-(R2-Pad1))
+    Local override; warning
+    @(1.7900 mm, 12.5600 mm): Pad 1 [Net 1] of R2 on Top
+[net_conflict]: Pad net (Net 31) doesn't match net given by schematic (Net-(U1-DIO_4))
+    Local override; warning
+    @(0.7900 mm, 12.5600 mm): Pad 2 [Net 31] of R2 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(6.3000 mm, 12.2700 mm): Footprint R3
+[net_conflict]: Pad net (Net 1) doesn't match net given by schematic (Net-(R2-Pad1))
+    Local override; warning
+    @(5.8000 mm, 12.2700 mm): Pad 1 [Net 1] of R3 on Top
+[net_conflict]: Pad net (Net 30) doesn't match net given by schematic (SDA)
+    Local override; warning
+    @(6.8000 mm, 12.2700 mm): Pad 2 [Net 30] of R3 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-5.6839 mm, 8.6902 mm): Footprint R4
+[net_conflict]: Pad net (Net 35) doesn't match net given by schematic (Net-(R4-Pad1))
+    Local override; warning
+    @(-5.3304 mm, 9.0438 mm): Pad 1 [Net 35] of R4 on Top
+[net_conflict]: Pad net (Net 34) doesn't match net given by schematic (SW1)
+    Local override; warning
+    @(-6.0375 mm, 8.3366 mm): Pad 2 [Net 34] of R4 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-5.4000 mm, -3.5500 mm): Footprint R5
+[net_conflict]: Pad net (Net 36) doesn't match net given by schematic (Net-(R5-Pad1))
+    Local override; warning
+    @(-5.4000 mm, -4.0500 mm): Pad 1 [Net 36] of R5 on Top
+[net_conflict]: Pad net (Net 33) doesn't match net given by schematic (SW2)
+    Local override; warning
+    @(-5.4000 mm, -3.0500 mm): Pad 2 [Net 33] of R5 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(11.9000 mm, 4.4100 mm): Footprint R6
+[net_conflict]: Pad net (Net 37) doesn't match net given by schematic (Net-(R6-Pad1))
+    Local override; warning
+    @(11.9000 mm, 4.9100 mm): Pad 1 [Net 37] of R6 on Bottom
+[net_conflict]: Pad net (Net 32) doesn't match net given by schematic (SW3)
+    Local override; warning
+    @(11.9000 mm, 3.9100 mm): Pad 2 [Net 32] of R6 on Bottom
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(8.1900 mm, 12.7400 mm): Footprint RESET
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(8.1900 mm, 12.2400 mm): Pad 1 [Net 0] of RESET on Top
+[net_conflict]: Pad net (Net 7) doesn't match net given by schematic (unconnected-(RESET-Pad2))
+    Local override; warning
+    @(8.1900 mm, 13.2400 mm): Pad 2 [Net 7] of RESET on Top
+[missing_footprint]: Missing footprint SCL (~)
+    Local override; warning
+[missing_footprint]: Missing footprint SCL1 (~)
+    Local override; warning
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(2.0130 mm, -2.8080 mm): Footprint SW0
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(2.0130 mm, -2.8080 mm): Footprint SW0
+[net_conflict]: Pad net (Net 25) doesn't match net given by schematic (unconnected-(SW0-Pad1))
+    Local override; warning
+    @(2.0130 mm, -2.8080 mm): Pad 1 [Net 25] of SW0 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(-7.4900 mm, 8.9000 mm): Footprint Switch1
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-7.4900 mm, 8.9000 mm): Footprint Switch1
+[net_conflict]: Pad net (Net 35) doesn't match net given by schematic (Net-(R4-Pad1))
+    Local override; warning
+    @(-7.4900 mm, 8.9000 mm): Pad 1 [Net 35] of Switch1 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(-7.4900 mm, -3.4700 mm): Footprint Switch2
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-7.4900 mm, -3.4700 mm): Footprint Switch2
+[net_conflict]: Pad net (Net 36) doesn't match net given by schematic (Net-(R5-Pad1))
+    Local override; warning
+    @(-7.4900 mm, -3.4700 mm): Pad 1 [Net 36] of Switch2 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(13.8600 mm, 5.1500 mm): Footprint Switch3
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(13.8600 mm, 5.1500 mm): Footprint Switch3
+[net_conflict]: Pad net (Net 37) doesn't match net given by schematic (Net-(R6-Pad1))
+    Local override; warning
+    @(13.8600 mm, 5.1500 mm): Pad 1 [Net 37] of Switch3 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(-1.7670 mm, -8.4580 mm): Footprint TDI
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-1.7670 mm, -8.4580 mm): Footprint TDI
+[net_conflict]: Pad net (Net 24) doesn't match net given by schematic (unconnected-(TDI-Pad1))
+    Local override; warning
+    @(-1.7670 mm, -8.4580 mm): Pad 1 [Net 24] of TDI on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(10.4930 mm, -6.6080 mm): Footprint TDO
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(10.4930 mm, -6.6080 mm): Footprint TDO
+[net_conflict]: Pad net (Net 23) doesn't match net given by schematic (unconnected-(TDO-Pad1))
+    Local override; warning
+    @(10.4930 mm, -6.6080 mm): Pad 1 [Net 23] of TDO on Bottom
+[missing_footprint]: Missing footprint U1 (~)
+    Local override; warning
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(3.7040 mm, 9.2920 mm): Footprint U3
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(3.7040 mm, 9.2920 mm): Footprint U3
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (GND)
+    Local override; warning
+    @(3.3500 mm, 8.2980 mm): Pad 1 [Net 0] of U3 on Top
+[net_conflict]: Pad net (Net 31) doesn't match net given by schematic (Net-(U3-SCL))
+    Local override; warning
+    @(3.7000 mm, 8.2980 mm): Pad 2 [Net 31] of U3 on Top
+[net_conflict]: Pad missing net given by schematic (unconnected-(U3-N{slash}C-Pad3))
+    Local override; warning
+    @(4.0500 mm, 8.2980 mm): Pad 3 [<no net>] of U3 on Top
+[net_conflict]: Pad net (Net 1) doesn't match net given by schematic (unconnected-(U3-VCC-Pad4))
+    Local override; warning
+    @(3.3500 mm, 10.2980 mm): Pad 4 [Net 1] of U3 on Top
+[net_conflict]: Pad net (Net 30) doesn't match net given by schematic (SDA)
+    Local override; warning
+    @(3.7000 mm, 10.2980 mm): Pad 5 [Net 30] of U3 on Top
+[net_conflict]: Pad missing net given by schematic (unconnected-(U3-N{slash}C-Pad6))
+    Local override; warning
+    @(4.0500 mm, 10.2980 mm): Pad 6 [<no net>] of U3 on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(8.2130 mm, 13.5320 mm): Footprint WMCU_RESET
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(8.2130 mm, 13.5320 mm): Footprint WMCU_RESET
+[net_conflict]: Pad net (Net 7) doesn't match net given by schematic (unconnected-(WMCU_RESET-Pad1))
+    Local override; warning
+    @(8.2130 mm, 13.5320 mm): Pad 1 [Net 7] of WMCU_RESET on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(2.2230 mm, 6.3720 mm): Footprint WMCU_RXD
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(2.2230 mm, 6.3720 mm): Footprint WMCU_RXD
+[net_conflict]: Pad net (Net 21) doesn't match net given by schematic (N-000001)
+    Local override; warning
+    @(2.2230 mm, 6.3720 mm): Pad 1 [Net 21] of WMCU_RXD on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(7.4530 mm, -2.6880 mm): Footprint WMCU_TCK
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(7.4530 mm, -2.6880 mm): Footprint WMCU_TCK
+[net_conflict]: Pad net (Net 5) doesn't match net given by schematic (unconnected-(WMCU_TCK-Pad1))
+    Local override; warning
+    @(7.4530 mm, -2.6880 mm): Pad 1 [Net 5] of WMCU_TCK on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(8.8030 mm, 1.7120 mm): Footprint WMCU_TMS
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(8.8030 mm, 1.7120 mm): Footprint WMCU_TMS
+[net_conflict]: Pad net (Net 6) doesn't match net given by schematic (unconnected-(WMCU_TMS-Pad1))
+    Local override; warning
+    @(8.8030 mm, 1.7120 mm): Pad 1 [Net 6] of WMCU_TMS on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(6.6430 mm, 4.9520 mm): Footprint WMCU_TXD
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(6.6430 mm, 4.9520 mm): Footprint WMCU_TXD
+[net_conflict]: Pad net (Net 22) doesn't match net given by schematic (unconnected-(WMCU_TXD-Pad1))
+    Local override; warning
+    @(6.6430 mm, 4.9520 mm): Pad 1 [Net 22] of WMCU_TXD on Top
+[footprint_symbol_mismatch]: Value () doesn't match symbol value (~)
+    Local override; warning
+    @(11.0630 mm, 8.3620 mm): Footprint WMCU_VDD
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(11.0630 mm, 8.3620 mm): Footprint WMCU_VDD
+[net_conflict]: Pad net (Net 1) doesn't match net given by schematic (unconnected-(WMCU_VDD-Pad1))
+    Local override; warning
+    @(11.0630 mm, 8.3620 mm): Pad 1 [Net 1] of WMCU_VDD on Top
+[footprint_symbol_mismatch]: FC-135 doesn't match footprint given by symbol ()
+    Local override; warning
+    @(9.6400 mm, 5.9250 mm): Footprint Y1
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(9.6400 mm, 5.9250 mm): Footprint Y1
+[net_conflict]: Pad net (Net 8) doesn't match net given by schematic (Net-(U1-X32K_Q1))
+    Local override; warning
+    @(9.6400 mm, 6.8100 mm): Pad 1 [Net 8] of Y1 on Top
+[net_conflict]: Pad net (Net 9) doesn't match net given by schematic (Net-(U1-X32K_Q2))
+    Local override; warning
+    @(9.6400 mm, 4.3100 mm): Pad 2 [Net 9] of Y1 on Top
+[footprint_symbol_field_mismatch]: Missing symbol field 'Name' in footprint
+    Local override; warning
+    @(-3.1439 mm, 6.9818 mm): Footprint Y2
+[net_conflict]: Pad net (Net 11) doesn't match net given by schematic (Net-(U1-X24M_P))
+    Local override; warning
+    @(-2.0867 mm, 7.5157 mm): Pad 1 [Net 11] of Y2 on Top
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (unconnected-(Y2-Pad2))
+    Local override; warning
+    @(-3.6424 mm, 5.9600 mm): Pad 2 [Net 0] of Y2 on Top
+[net_conflict]: Pad net (Net 12) doesn't match net given by schematic (Net-(U1-X24M_N))
+    Local override; warning
+    @(-4.7737 mm, 7.0914 mm): Pad 3 [Net 12] of Y2 on Top
+[net_conflict]: Pad net (Net 0) doesn't match net given by schematic (unconnected-(Y2-Pad4))
+    Local override; warning
+    @(-3.2181 mm, 8.6470 mm): Pad 4 [Net 0] of Y2 on Top
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(9.3250 mm, 10.5024 mm): Footprint MH5
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-4.4760 mm, 10.4624 mm): Footprint MH6
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(10.5520 mm, 1.2624 mm): Footprint MH1
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-5.2200 mm, 1.5464 mm): Footprint MH2
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(0.9000 mm, 3.3700 mm): Footprint Pad6
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(2.3900 mm, 12.7415 mm): Footprint U2
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-3.7820 mm, -7.1336 mm): Footprint MH3
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-4.0800 mm, 12.3500 mm): Footprint Pad5
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-9.6700 mm, -2.1236 mm): Footprint P5
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(2.5400 mm, 2.0150 mm): Footprint <no reference designator>
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(9.1920 mm, -7.0646 mm): Footprint MH4
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(4.3900 mm, 3.3800 mm): Footprint Pad7
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-9.6700 mm, 7.5564 mm): Footprint P6
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(0.4100 mm, 1.3200 mm): Footprint Pad3
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(4.8900 mm, 1.3200 mm): Footprint Pad4
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(-6.2100 mm, 8.2700 mm): Footprint Pad1
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(11.5500 mm, 8.2700 mm): Footprint Pad2
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(15.0100 mm, 7.7564 mm): Footprint P7
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

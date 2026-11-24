@@ -87,42 +87,53 @@
 #include "f91_buttons.h"
 #include "f91_utils.h"
 #include "ssd1306.h"
+#include "f91_power.h"
+#include "f91_battery_service.h"
 
 
 /*********************************************************************
  * CONSTANTS
  */
 
-// Advertising interval when device is discoverable (units of 625us, 160=100ms)
-#define DEFAULT_ADVERTISING_INTERVAL          160
+// Advertising interval when device is discoverable (units of 625us, 1636=1022.5ms)
+// POWER: was 160 (100 ms). Advertising runs whenever no phone is connected, so a
+// 10x longer interval cuts that cost ~10x. 1022.5 ms is one of the intervals
+// Apple recommends, so iOS still finds the watch quickly (typically 1-3 s).
+#define DEFAULT_ADVERTISING_INTERVAL          1636
 
 // General discoverable mode: advertise indefinitely
 #define DEFAULT_DISCOVERABLE_MODE             GAP_ADTYPE_FLAGS_GENERAL
 
-// Minimum connection interval (units of 1.25ms, 80=100ms) for automatic
-// parameter update request
-#define DEFAULT_DESIRED_MIN_CONN_INTERVAL     80
+// POWER: Connection parameters. These values satisfy Apple's accessory
+// guidelines (Max >= Min + 15 ms, Max * (Latency + 1) <= 2 s,
+// Max * (Latency + 1) * 3 < Timeout <= 6 s) and are accepted by Android.
+// With latency 3 the watch only has to wake for ~1 in 4 connection events
+// (about every 1.9 s) while idle, but still answers within ~0.5 s whenever the
+// phone has data queued.
 
-// Maximum connection interval (units of 1.25ms, 800=1000ms) for automatic
+// Minimum connection interval (units of 1.25ms, 360=450ms) for automatic
 // parameter update request
-#define DEFAULT_DESIRED_MAX_CONN_INTERVAL     800
+#define DEFAULT_DESIRED_MIN_CONN_INTERVAL     360
+
+// Maximum connection interval (units of 1.25ms, 384=480ms) for automatic
+// parameter update request
+#define DEFAULT_DESIRED_MAX_CONN_INTERVAL     384
 
 // Slave latency to use for automatic parameter update request
-#define DEFAULT_DESIRED_SLAVE_LATENCY         0
+#define DEFAULT_DESIRED_SLAVE_LATENCY         3
 
-// Supervision timeout value (units of 10ms, 1000=10s) for automatic parameter
+// Supervision timeout value (units of 10ms, 600=6s) for automatic parameter
 // update request
-#define DEFAULT_DESIRED_CONN_TIMEOUT          1000
+#define DEFAULT_DESIRED_CONN_TIMEOUT          600
 
-// After the connection is formed, the peripheral waits until the central
-// device asks for its preferred connection parameters
-#define DEFAULT_ENABLE_UPDATE_REQUEST         GAPROLE_LINK_PARAM_UPDATE_WAIT_REMOTE_PARAMS
+// POWER: was GAPROLE_LINK_PARAM_UPDATE_WAIT_REMOTE_PARAMS, which meant the
+// parameters above were never requested and the link stayed at the phone's
+// default (typically 30-50 ms interval, latency 0). Now the watch asks for
+// them DEFAULT_CONN_PAUSE_PERIPHERAL seconds after connecting.
+#define DEFAULT_ENABLE_UPDATE_REQUEST         GAPROLE_LINK_PARAM_UPDATE_INITIATE_APP_PARAMS
 
 // Connection Pause Peripheral time value (in seconds)
 #define DEFAULT_CONN_PAUSE_PERIPHERAL         6
-
-// How often to perform periodic event (in msec)
-#define F91_PERIODIC_EVT_PERIOD               5000
 
 // Application specific event ID for HCI Connection Event End Events
 #define F91_HCI_CONN_EVT_END_EVT              0x0001
@@ -143,16 +154,18 @@
 #define F91_CLOCK_CHAR_CHANGE_EVT             (1 << 5)
 #define F91_BUTTON_PRESS_EVT                  (1 << 6)
 #define F91_SSD1306_DISPLAY_EVT               (1 << 7)
+#define F91_POWER_EVT                         0x03       // BQ25180 /INT or the 60 s battery tick (hdr.event is uint8_t: any unused code)
+
+// Battery/charger check period (v2 board)
+#define F91_POWER_PERIOD_MS                   60000
 
 // Internal Events for RTOS application
 #define F91_ICALL_EVT                         ICALL_MSG_EVENT_ID // Event_Id_31
 #define F91_QUEUE_EVT                         UTIL_QUEUE_EVENT_ID // Event_Id_30
-#define F91_PERIODIC_EVT                      Event_Id_00
 
 // Bitwise OR of all events to pend on
 #define F91_ALL_EVENTS                        (F91_ICALL_EVT        | \
-                                               F91_QUEUE_EVT        | \
-                                               F91_PERIODIC_EVT)
+                                               F91_QUEUE_EVT)
 
 
 // Set the register cause to the registration bit-mask
@@ -182,6 +195,9 @@ typedef struct
 // Display Interface
 Display_Handle dispHandle = NULL;
 
+// v2 board: periodic battery/charger check
+static Clock_Struct powerClock;
+
 /*********************************************************************
  * LOCAL VARIABLES
  */
@@ -192,9 +208,6 @@ static ICall_EntityID selfEntity;
 // Event globally used to post local events and pend on system and
 // local events.
 static ICall_SyncHandle syncEvent;
-
-// Clock instances for internal periodic events.
-static Clock_Struct periodicClock;
 
 // Queue object used for app messages
 static Queue_Struct appMsg;
@@ -220,9 +233,9 @@ static uint8_t scanRspData[] =
   // connection interval range
   0x05,   // length of this data
   GAP_ADTYPE_SLAVE_CONN_INTERVAL_RANGE,
-  LO_UINT16(DEFAULT_DESIRED_MIN_CONN_INTERVAL),   // 100ms
+  LO_UINT16(DEFAULT_DESIRED_MIN_CONN_INTERVAL),   // 450ms
   HI_UINT16(DEFAULT_DESIRED_MIN_CONN_INTERVAL),
-  LO_UINT16(DEFAULT_DESIRED_MAX_CONN_INTERVAL),   // 1s
+  LO_UINT16(DEFAULT_DESIRED_MAX_CONN_INTERVAL),   // 480ms
   HI_UINT16(DEFAULT_DESIRED_MAX_CONN_INTERVAL),
 
   // Tx power level
@@ -264,9 +277,11 @@ static void F91Kepler_taskFxn(UArg a0, UArg a1);
 static uint8_t F91Kepler_processStackMsg(ICall_Hdr *pMsg);
 static uint8_t F91Kepler_processGATTMsg(gattMsgEvent_t *pMsg);
 static void F91Kepler_processAppMsg(f91Evt_t *pMsg);
+static void F91Kepler_processPowerEvt(void);
+static void F91Kepler_powerIntCB(void);
+static void F91Kepler_powerClockCB(UArg arg);
 static void F91Kepler_processStateChangeEvt(gaprole_States_t newState);
 static void F91Kepler_processCharValueChangeEvt(uint8_t serviceID, uint8_t paramID);
-static void F91Kepler_clockHandler(UArg arg);
 
 static void F91Kepler_passcodeCB(uint8_t *deviceAddr,
                                         uint16_t connHandle,
@@ -445,11 +460,8 @@ static void F91Kepler_init(void)
   // Create an RTOS queue for message from profile to be sent to app.
   appMsgQueue = Util_constructQueue(&appMsg);
 
-  // Create one-shot clocks for internal periodic events.
-  Util_constructClock(&periodicClock, F91Kepler_clockHandler,
-                      F91_PERIODIC_EVT_PERIOD, 0, false, F91_PERIODIC_EVT);
-
-  
+  // POWER: the 5 s periodic clock that used to be created here did no work
+  // but woke the CPU every 5 s while connected, so it has been removed.
 
   Display_init();
   F91_LOGGER = Display_open(Display_Type_UART, NULL);
@@ -548,6 +560,14 @@ static void F91Kepler_init(void)
   GGS_AddService(GATT_ALL_SERVICES);           // GAP GATT Service
   GATTServApp_AddService(GATT_ALL_SERVICES);   // GATT Service
   DevInfo_AddService();                        // Device Information Service
+  F91_battery_service_AddService();            // Battery Service 0x180F (v2 board)
+
+#ifdef F91_HW_V2
+  // v2 board: charger + battery sense. Opens the shared I2C bus before the display uses it.
+  F91Power_init(F91Kepler_powerIntCB);
+  F91_battery_service_SetLevel(F91Power_status()->percent);
+  Util_constructClock(&powerClock, F91Kepler_powerClockCB, F91_POWER_PERIOD_MS, F91_POWER_PERIOD_MS, true, 0);
+#endif
 
   //Display_print0(F91_LOGGER, 0, 0, "Starting F91 Notification module.");
   F91Notification_init();
@@ -667,11 +687,6 @@ static void F91Kepler_taskFxn(UArg a0, UArg a1)
             ICall_free(pMsg);
           }
         }
-      }
-
-      if (events & F91_PERIODIC_EVT)
-      {
-        Util_startClock(&periodicClock);
       }
 
       // Process event if available
@@ -890,6 +905,12 @@ static void F91Kepler_processAppMsg(f91Evt_t *pMsg)
         ssd1306_update();
       }
       break;
+
+    case F91_POWER_EVT:
+      {
+        F91Kepler_processPowerEvt();
+      }
+      break;
     // Pairing event
     case F91_PAIRING_STATE_EVT:
       {
@@ -1024,8 +1045,6 @@ static void F91Kepler_processStateChangeEvt(gaprole_States_t newState)
         linkDBInfo_t linkInfo;
         uint8_t numActive = 0;
 
-        Util_startClock(&periodicClock);
-
         numActive = linkDB_NumActive();
 
         // Use numActive to determine the connection handle of the last
@@ -1077,7 +1096,6 @@ static void F91Kepler_processStateChangeEvt(gaprole_States_t newState)
       {
         uint8_t advertReEnable = TRUE;
 
-        Util_stopClock(&periodicClock);
         attRsp_freeAttRsp(bleNotConnected);
 
         // Clear remaining lines
@@ -1316,21 +1334,6 @@ static void F91Kepler_processPasscode(uint8_t uiOutputs)
 }
 
 /*********************************************************************
- * @fn      F91Kepler_clockHandler
- *
- * @brief   Handler function for clock timeouts.
- *
- * @param   arg - event type
- *
- * @return  None.
- */
-static void F91Kepler_clockHandler(UArg arg)
-{
-  // Wake up the application.
-  Event_post(syncEvent, arg);
-}
-
-/*********************************************************************
  * @fn      F91Kepler_connEvtCB
  *
  * @brief   Connection event callback.
@@ -1378,3 +1381,46 @@ static uint8_t F91Kepler_enqueueMsg(uint8_t event, uint8_t state,
 
 /*********************************************************************
 *********************************************************************/
+
+
+/*********************************************************************
+ * v2 board power handling (BQ25180 + battery sense)
+ */
+
+// PIN driver (Hwi) context: only queue an event, the I2C access happens in the task.
+static void F91Kepler_powerIntCB(void)
+{
+  F91Kepler_enqueueMsg(F91_POWER_EVT, 0, 0);
+}
+
+// Clock (Swi) context: same.
+static void F91Kepler_powerClockCB(UArg arg)
+{
+  (void)arg;
+  F91Kepler_enqueueMsg(F91_POWER_EVT, 0, 0);
+}
+
+/*********************************************************************
+ * @fn      F91Kepler_processPowerEvt
+ *
+ * @brief   Re-read charger state and battery voltage, update the Battery Service,
+ *          warn on low battery and shut down before the BQ25180 undervoltage cut-off.
+ */
+static void F91Kepler_processPowerEvt(void)
+{
+  const F91PowerStatus_t *ps;
+
+  F91Power_update();
+  ps = F91Power_status();
+  F91_battery_service_SetLevel(ps->percent);
+
+  if (ps->pmicOk && ps->charge == F91_CHG_NONE && ps->vbat_mV != 0 && ps->vbat_mV < F91_VBAT_SHUTDOWN_MV)
+  {
+    // Show why the watch goes dark, then cut SYS (wakes when a charger is plugged in).
+    ssd1306_toggle_display(true);
+    ssd1306_display_full_notification(TEXT, "Battery empty");
+    ssd1306_update();
+    Task_sleep(2000 * (1000 / Clock_tickPeriod));
+    F91Power_shutdown();
+  }
+}

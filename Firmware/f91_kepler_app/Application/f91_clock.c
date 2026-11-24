@@ -78,15 +78,13 @@
 #endif
 
 
-// Internal Events for RTOS application
-#define F91_ICALL_EVT                         ICALL_MSG_EVENT_ID // Event_Id_31
-#define F91_QUEUE_EVT                         UTIL_QUEUE_EVENT_ID // Event_Id_30
-#define F91_PERIODIC_EVT                      Event_Id_00
+// Mailbox message id used to ask the clock task to redraw right away
+// (e.g. the display was just turned on). Must not collide with
+// F91_CLOCK_SERVICE_CHAR1..4.
+#define F91_CLOCK_MSG_REFRESH                 0xFF
 
-// Bitwise OR of all events to pend on
-#define F91_ALL_EVENTS                        (F91_ICALL_EVT        | \
-                                               F91_QUEUE_EVT        | \
-                                               F91_PERIODIC_EVT)
+// Redraw period while the display is on (ms)
+#define F91_CLOCK_REFRESH_PERIOD_MS           1000
 /*********************************************************************
  * LOCAL VARIABLES
  */
@@ -126,7 +124,7 @@ static void _F91Clock_setDst(uint8_t mode);
 static uint16_t _F91Clock_getTimeZone( void );
 static bool _F91Clock_getTimeMode( void );
 static bool _F91Clock_getDst( void );
-static void _F91Clock_checkInbox( void );
+static void _F91Clock_handleMsg( MsgObj *msg );
 
 
 /*********************************************************************
@@ -207,7 +205,7 @@ static void _F91Clock_setDst(uint8_t mode)
         break;
     }
 
-    F91_clock_service_SetParameter(F91_CLOCK_SERVICE_CHAR3, 1, &mode);
+    F91_clock_service_SetParameter(F91_CLOCK_SERVICE_CHAR4, 1, &mode);
 }
 
 /*********************************************************************
@@ -250,37 +248,34 @@ static bool _F91Clock_getDst( void )
 }
 
 /*********************************************************************
- * @fn      F91Clock_checkInbox
+ * @fn      F91Clock_handleMsg
  *
- * @brief   Checks if there has been any messages sent to this task (clock) to update its parameters.
+ * @brief   Applies one message sent to this task (clock) to update its parameters.
  *          Using a mailbox since there are two tasks at play here. (f91_clock and f91_kepler).
  *
- * @param   none
+ * @param   msg - message received from the mailbox
  *
  */
-static void _F91Clock_checkInbox( void )
+static void _F91Clock_handleMsg( MsgObj *msg )
 {
-    MsgObj msg;
-    Int i;
-    for (i = 0; i < Mailbox_getNumPendingMsgs(mbxHandle); i++) {
-        Mailbox_pend(mbxHandle, &msg, BIOS_NO_WAIT);
-        switch (msg.id) 
-        {
-            case F91_CLOCK_SERVICE_CHAR1:
-                _F91Clock_setTime(*((uint32_t*)msg.value));
-                break;
-            case F91_CLOCK_SERVICE_CHAR2:
-                _F91Clock_setTimeZone(*((uint16_t*)msg.value));
-                break;
-            case F91_CLOCK_SERVICE_CHAR3:
-                _F91Clock_setTimeMode(*((uint8_t*)msg.value));
-                break;
-            case F91_CLOCK_SERVICE_CHAR4:
-                _F91Clock_setDst(*((uint8_t*)msg.value));
-                break;
-            default:
-                break;
-        }
+    switch (msg->id)
+    {
+        case F91_CLOCK_SERVICE_CHAR1:
+            _F91Clock_setTime(msg->value);
+            break;
+        case F91_CLOCK_SERVICE_CHAR2:
+            _F91Clock_setTimeZone((uint16_t)msg->value);
+            break;
+        case F91_CLOCK_SERVICE_CHAR3:
+            _F91Clock_setTimeMode((uint8_t)msg->value);
+            break;
+        case F91_CLOCK_SERVICE_CHAR4:
+            _F91Clock_setDst((uint8_t)msg->value);
+            break;
+        case F91_CLOCK_MSG_REFRESH:
+        default:
+            // Nothing to apply; the caller redraws after every wake-up.
+            break;
     }
 }
 
@@ -340,12 +335,19 @@ static void _F91Clock_doTime(void) {
     struct tm *ltm;
     bool eraseFirstDigit = false;
     char *dateString;
-    char hour[2];
-    char minute[2];
-    char second[2];
-    char month[2];
-    char day[2];
-    uint32_t timeInSeconds = 0;
+    // Sized for ltoa's terminator and the "MM/DD" strcat below (were [2],
+    // which overran the stack).
+    char hour[4];
+    char minute[4];
+    char second[4];
+    char month[8];
+    char day[4];
+
+    // Nothing to draw while the display is off or a full screen notification
+    // owns it, so skip the time conversion entirely.
+    if((!ssd1306_getState()) || (F91Notification_getNotificationState())){
+        return;
+    }
 
     t1 = time(NULL);
     t1 = t1 - _F91Clock_getTimeZone();
@@ -356,10 +358,9 @@ static void _F91Clock_doTime(void) {
     }
 
     ltm = localtime(&t1);
-    
-    //Update service
-    timeInSeconds = Seconds_get();
-    F91_clock_service_SetParameter(F91_CLOCK_SERVICE_CHAR1, sizeof(uint32_t), &timeInSeconds);
+
+    // POWER: the Time characteristic used to be refreshed here every second.
+    // It is now refreshed on demand in the service's read callback instead.
 
     //Only update the time details for the display if the display is on AND
     // there isn't a full screen notification being displayed.
@@ -452,19 +453,35 @@ static f91_clock_serviceCBs_t F91Clock_StateChangeCB =
  */
 static void _F91Clock_taskFxn(UArg a0, UArg a1)
 {
+    MsgObj msg;
+
     // Initialize application
     _F91Clock_internal_init();
     // Application main loop
     for (;;)
-    {   
-        //Update the time.
+    {
+        // POWER: this task used to wake every second forever, even with the
+        // display off. The time itself is kept by the RTC (Seconds module), so
+        // the task only needs to run to redraw the screen. While the display
+        // is off it now blocks until a message arrives (a characteristic write
+        // or F91Clock_refreshDisplay() when the display turns on).
+        UInt32 timeout = ssd1306_getState()
+                         ? F91_CLOCK_REFRESH_PERIOD_MS * (1000 / Clock_tickPeriod)
+                         : BIOS_WAIT_FOREVER;
+
+        if (Mailbox_pend(mbxHandle, &msg, timeout))
+        {
+            _F91Clock_handleMsg(&msg);
+
+            // Drain anything else that queued up meanwhile.
+            while (Mailbox_pend(mbxHandle, &msg, BIOS_NO_WAIT))
+            {
+                _F91Clock_handleMsg(&msg);
+            }
+        }
+
+        //Update the time on the display (no-op while it is off).
         _F91Clock_doTime();
-
-        //Check if there is any messages to update time parameters.
-        _F91Clock_checkInbox();
-
-        //Let the task sleep for a second so other tasks can do there duties.
-        Task_sleep(1000 * (1000 / Clock_tickPeriod));
     }
 }
 
@@ -499,34 +516,42 @@ void F91Clock_processCharChangeEvt(uint8_t paramID)
   uint16_t zone;
   uint8_t  mode;
   MsgObj msg;
-  
+
   switch (paramID)
   {
     case F91_CLOCK_SERVICE_CHAR1:
         F91_clock_service_GetParameter(F91_CLOCK_SERVICE_CHAR1, &time);
-        msg.id = F91_CLOCK_SERVICE_CHAR1;
-        msg.value = &time;
-        Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
+        msg.value = time;
       break;
     case F91_CLOCK_SERVICE_CHAR2:
         F91_clock_service_GetParameter(F91_CLOCK_SERVICE_CHAR2, &zone);
-        msg.id = F91_CLOCK_SERVICE_CHAR2;
-        msg.value = &zone;
-        Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
+        msg.value = zone;
       break;
     case F91_CLOCK_SERVICE_CHAR3:
-        F91_clock_service_GetParameter(F91_CLOCK_SERVICE_CHAR3, &mode);
-        msg.id = F91_CLOCK_SERVICE_CHAR3;
-        msg.value = &mode;
-        Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
-      break;
     case F91_CLOCK_SERVICE_CHAR4:
-        F91_clock_service_GetParameter(F91_CLOCK_SERVICE_CHAR4, &mode);
-        msg.id = F91_CLOCK_SERVICE_CHAR4;
-        msg.value = &mode;
-        Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
+        F91_clock_service_GetParameter(paramID, &mode);
+        msg.value = mode;
       break;
     default:
-      break;
+      return;
   }
+
+  msg.id = paramID;
+  Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
+}
+
+/*********************************************************************
+ * @fn      F91Clock_refreshDisplay
+ *
+ * @brief   Wake the clock task so it redraws immediately (call right after
+ *          turning the display on). Safe from Task, Swi and Hwi context.
+ *
+ */
+void F91Clock_refreshDisplay(void)
+{
+  MsgObj msg;
+
+  msg.id = F91_CLOCK_MSG_REFRESH;
+  msg.value = 0;
+  Mailbox_post(mbxHandle, &msg, BIOS_NO_WAIT);
 }
